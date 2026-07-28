@@ -1,0 +1,40 @@
+/* ============================================================
+   SCIENCE CLAW — SPACING & SIZING TOKENS
+   8px base rhythm. HUD panels are compact; touch targets >= 44px.
+   ============================================================ */
+
+:root {
+  /* --- Spacing scale --- */
+  --sp-0:   0;      /* @kind spacing */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;   /* default panel padding */
+  --sp-6:   24px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+
+  /* --- Panel insets --- */
+  --pad-panel:   20px;
+  --pad-panel-sm: 15px;
+  --pad-modal:   30px;
+
+  /* --- Layout: HUD overlay margins from viewport edge --- */
+  --edge:        20px;
+  --edge-lg:     25px;
+
+  /* --- Component sizes --- */
+  --hud-width:   240px;     /* left player HUD */
+  --panel-width: 280px;     /* collection / side panels */
+  --control-h:   44px;      /* min interactive height (touch) */
+  --btn-h:       48px;
+  --btn-h-sm:    38px;
+  --input-h:     48px;
+
+  /* --- Gaps --- */
+  --gap-stack:   8px;       /* between HUD rows */
+  --gap-row:     10px;      /* between inline buttons */
+  --gap-grid:    12px;
+}

@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./feedback-lab/js/claude-bridge.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/styles.css">
+  <script src="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/_ds_bundle.js"></script>
+  <script type="module">
+    import * as pdfjs from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
+    pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs';
+    window.pdfjsLib = pdfjs;
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <style>
+    body { margin: 0; background: var(--sc-bg); font-family: var(--font-body); color: var(--sc-text); }
+    body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(1100px 640px at 50% -12%, rgba(102,204,255,0.07), transparent 62%), radial-gradient(820px 520px at 88% 116%, rgba(181,87,230,0.05), transparent 58%); pointer-events: none; }
+    @keyframes sc-toast-in { from { transform: translate(-50%, 20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+    @keyframes sc-link-flow { from { background-position: 0 0, 0% 50%; } to { background-position: 0 0, 300% 50%; } }
+    @keyframes sc-scan { 0% { transform: translateX(-100%); } 100% { transform: translateX(260%); } }
+    input::placeholder, textarea::placeholder { color: var(--sc-text-faint); }
+    .fc-light {
+      --sc-bg: #eef2f7; --sc-black: #dbe2ea; --sc-scene: #e4ebf2;
+      --sc-ink-900: #ffffff; --sc-ink-800: #f4f7fa; --sc-ink-700: #e7edf3;
+      --sc-text: #16202b; --sc-text-soft: #35424f; --sc-text-muted: #64717e; --sc-text-faint: #9aa6b2;
+      --sc-line: rgba(20,32,44,0.16); --sc-line-strong: rgba(20,32,44,0.3);
+      --sc-glass: rgba(255,255,255,0.9); --sc-glass-soft: rgba(255,255,255,0.72); --sc-glass-strong: rgba(255,255,255,0.96); --sc-glass-line: rgba(20,32,44,0.12);
+      --sc-btn-neutral: #e2e8ef; --sc-btn-neutral-hi: #d2dae3; --sc-input-bg: #ffffff; --sc-input-line: rgba(20,32,44,0.2);
+    }
+    .fc-light .fc-invert-emoji { filter: none; }
+  </style>
+</helmet>
+
+<div class="{{ rootClass }}" style="position:relative; min-height:100vh; padding: 0 16px 80px; background: var(--sc-bg); color: var(--sc-text); transition: background 200ms ease-out;">
+  <div style="max-width: 1240px; margin: 0 auto; display:flex; flex-direction:column; gap:20px;">
+
+    <!-- ===== Header ===== -->
+    <header style="position: sticky; top: 0; z-index: 20; display:flex; flex-wrap:wrap; align-items:center; gap:14px; justify-content:space-between; padding: 14px 6px 13px; margin: 0 -6px; background: linear-gradient(180deg, var(--sc-bg) 72%, transparent); border-bottom: 1px solid var(--sc-glass-line);">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <span style="font-size:24px; filter: drop-shadow(0 0 10px rgba(255,182,39,0.4));">🦾</span>
+        <span style="font-family: var(--font-display); font-weight: 900; font-size: 19px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--sc-yellow); white-space: nowrap;">Form Creator</span>
+        <span style="font-size: 12px; color: var(--sc-text-faint); font-weight: 600; letter-spacing: 0.02em; border-left: 1px solid var(--sc-line); padding-left: 11px; margin-left: 1px;">Worksheet → Google Form</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <span title="Time since you started (or your last eye break). At 40 min you'll get a gentle reminder to rest your eyes." style="display:inline-flex; align-items:center; gap:5px; font-family: var(--font-mono); font-weight: 700; font-size: 12.5px; color: {{ eyeColor }}; background: var(--sc-glass); border: 1px solid {{ eyeLine }}; border-radius: 999px; padding: 7px 12px; user-select: none;">{{ eyeTimer }}</span>
+        <button onClick="{{ toggleTheme }}" title="Switch between dark and daylight themes" style="display:inline-flex; align-items:center; justify-content:center; width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--sc-line); background: var(--sc-glass); color: var(--sc-text-soft); font-size: 16px; cursor: pointer; transition: border-color 120ms ease-out;" style-hover="border-color: var(--sc-yellow);">{{ themeIcon }}</button>
+        <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.SegmentedControl" options="{{ modeOptions }}" value="{{ mode }}" onChange="{{ setMode }}" hint-size="320px,44px"></x-import>
+        <a href="feedback-lab/index.html" title="Open the Science Feedback Generator" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none; white-space:nowrap; font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--sc-cyan); border: 2px solid transparent; border-radius: 12px; padding: 8px 13px; background: linear-gradient(var(--sc-ink-900), var(--sc-ink-900)) padding-box, linear-gradient(90deg, #ffb627, #3fc35f, #66ccff, #b557e6, #ffb627) border-box; background-size: auto, 300% 100%; animation: sc-link-flow 3s linear infinite; box-shadow: 0 0 14px rgba(102,204,255,0.25); transition: box-shadow 120ms ease-out;" style-hover="box-shadow: 0 0 22px rgba(102,204,255,0.5);">🔬 Feedback Generator</a>
+      </div>
+    </header>
+
+    <!-- ================= EDIT MODE ================= -->
+    <sc-if value="{{ isEdit }}" hint-placeholder-val="{{ true }}">
+      <div data-screen-label="Editor" style="display:flex; flex-wrap:wrap; gap:18px; align-items:flex-start;">
+
+        <aside style="flex: 1 1 280px; min-width: 264px; max-width: 348px; position: sticky; top: 74px; display:flex; flex-direction:column; gap:14px;">
+
+          <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 18px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); display:flex; flex-direction:column; gap:8px;">
+            <span style="display:inline-flex; align-items:center; gap:7px; font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--sc-text-muted);"><span style="width:7px; height:7px; border-radius:999px; background: var(--sc-yellow); box-shadow: 0 0 7px var(--sc-yellow);"></span>Worksheet</span>
+            <input value="{{ formTitle }}" onChange="{{ setFormTitle }}" placeholder="Untitled form" style="background: transparent; border: none; border-bottom: 1px solid var(--sc-line); outline: none; color: var(--sc-text); font-family: var(--font-display); font-weight: 800; font-size: 20px; padding: 6px 2px;" />
+            <input value="{{ formDesc }}" onChange="{{ setFormDesc }}" placeholder="Form description" style="background: transparent; border: none; border-bottom: 1px solid var(--sc-glass-line); outline: none; color: var(--sc-text-soft); font-size: 14px; padding: 6px 2px;" />
+          </div>
+
+          <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 18px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); display:flex; flex-direction:column; gap:8px;">
+            <span style="display:inline-flex; align-items:center; gap:7px; font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--sc-text-muted); margin-bottom: 2px;"><span style="width:7px; height:7px; border-radius:999px; background: var(--sc-green); box-shadow: 0 0 7px var(--sc-green);"></span>Actions</span>
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ true }}" onClick="{{ openImport }}" hint-size="100%,44px">🤖 Transcribe with Claude</x-import>
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ true }}" onClick="{{ addQuestion }}" hint-size="100%,44px">+ Add Question</x-import>
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ true }}" onClick="{{ openExport }}" hint-size="100%,44px">⚙️ Export Apps Script</x-import>
+            <sc-if value="{{ hasQuestions }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ true }}" onClick="{{ downloadWord }}" hint-size="100%,44px">📄 Download Word</x-import>
+            </sc-if>
+            <sc-if value="{{ anyImages }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ true }}" onClick="{{ downloadImages }}" hint-size="100%,44px">🖼 Download images</x-import>
+            </sc-if>
+            <sc-if value="{{ hasQuestions }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="ghost" block="{{ true }}" onClick="{{ clearAllQuestions }}" hint-size="100%,40px">Clear all</x-import>
+            </sc-if>
+          </div>
+
+          <sc-if value="{{ hasQuestions }}" hint-placeholder-val="{{ false }}">
+            <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 18px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); display:flex; flex-direction:column; gap:11px;">
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <span style="display:inline-flex; align-items:center; gap:7px; font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--sc-text-muted);"><span style="width:7px; height:7px; border-radius:999px; background: var(--sc-blue); box-shadow: 0 0 7px var(--sc-blue);"></span>Questions</span>
+                <span style="font-family: var(--font-display); font-weight: 900; font-size: 15px; color: var(--sc-blue-bright);">{{ questionCount }}</span>
+              </div>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <sc-for list="{{ editQuestions }}" as="q" hint-placeholder-count="6">
+                  <button onClick="{{ q.toggleOpen }}" title="{{ q.titlePreview }}" style="background: {{ q.pillBg }}; color: {{ q.pillColor }}; border: 1px solid {{ q.pillLine }}; border-radius: 999px; font-family: var(--font-mono); font-weight: 700; font-size: 11.5px; padding: 4px 9px; cursor: pointer; box-shadow: {{ q.pillGlow }}; transition: box-shadow 120ms ease-out;" style-hover="box-shadow: 0 0 10px rgba(102,204,255,0.4);">{{ q.labelText }}</button>
+                </sc-for>
+              </div>
+              <div style="font-size: 12px; color: var(--sc-text-muted); font-weight: 600; border-top: 1px solid var(--sc-glass-line); padding-top: 9px;">{{ statLine }}</div>
+              <sc-if value="{{ hasDupes }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; flex-direction:column; gap:8px; background: rgba(232,73,63,0.1); border: 1px solid rgba(232,73,63,0.45); border-radius: 10px; padding: 10px 12px;">
+                  <div style="font-size: 12px; line-height: 1.45; color: var(--sc-red-bright); font-weight: 600;">{{ dupWarning }}</div>
+                  <button onClick="{{ removeDuplicates }}" style="align-self:flex-start; background: rgba(232,73,63,0.16); border: 1px solid rgba(232,73,63,0.5); border-radius: 8px; color: var(--sc-red-bright); font-size: 12px; font-weight: 700; padding: 6px 11px; cursor: pointer;" style-hover="background: rgba(232,73,63,0.26);">Remove duplicate questions</button>
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+        </aside>
+
+        <div style="flex: 999 1 460px; min-width: 0; display:flex; flex-direction:column; gap:12px;">
+
+        <sc-if value="{{ noQuestions }}" hint-placeholder-val="{{ false }}">
+          <div style="background: var(--sc-glass-soft); border: 1px dashed var(--sc-line-strong); border-radius: 20px; padding: 44px 24px; text-align:center; display:flex; flex-direction:column; gap:8px; align-items:center;">
+            <div style="font-size: 34px;">📋</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 18px;">No questions yet</div>
+            <div style="color: var(--sc-text-muted); font-size: 15px; max-width: 440px;">Upload a PDF or photo of your worksheet and Claude will transcribe it into form questions — or add one manually.</div>
+          </div>
+        </sc-if>
+
+        <sc-for list="{{ editQuestions }}" as="q" hint-placeholder-count="2">
+          <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid {{ q.cardLine }}; border-radius: 20px; padding: 14px 20px; box-shadow: {{ q.cardShadow }}; display:flex; flex-direction:column; gap:12px; transition: border-color 120ms ease-out, box-shadow 120ms ease-out;">
+            <div onClick="{{ q.toggleOpen }}" title="Click to expand / collapse" style="display:flex; align-items:center; gap:12px; cursor:pointer; min-height: 34px;">
+              <span style="flex:none; font-family: var(--font-mono); font-weight:700; font-size: 13px; background: {{ q.pillBg }}; color: {{ q.pillColor }}; border: 1px solid {{ q.pillLine }}; border-radius: 999px; padding: 4px 12px;">{{ q.labelText }}</span>
+              <span style="flex:1; min-width: 0; font-size: 15px; font-weight: 600; color: var(--sc-text-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ q.titlePreview }}</span>
+              <span style="flex:none; font-size: 12px; color: var(--sc-text-faint); font-weight: 700;">{{ q.typeLabel }}</span>
+              <span style="flex:none; color: var(--sc-cyan); font-size: 15px; font-weight: 800;">{{ q.chevron }}</span>
+            </div>
+            <sc-if value="{{ q.isOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
+              <span title="Question label — matches the printed worksheet; edit the number if needed" style="flex:none; display:inline-flex; align-items:center; font-family: var(--font-mono); font-weight:700; font-size: 13px; background: rgba(74,144,226,0.18); color: var(--sc-blue-bright); border: 1px solid rgba(74,144,226,0.4); border-radius: 999px; padding: 4px 4px 4px 12px;">{{ q.prefix }}<input value="{{ q.number }}" onChange="{{ q.setNumber }}" placeholder="{{ q.num }}" style="width: 40px; background: transparent; border: none; outline: none; color: var(--sc-blue-bright); font-family: var(--font-mono); font-weight: 700; font-size: 13px; padding: 0 4px;" /></span>
+              <input value="{{ q.title }}" onChange="{{ q.setTitle }}" placeholder="Question text" style="flex:1; min-width: 180px; background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text); font-size: 16px; font-weight: 600; padding: 10px 12px; outline-color: var(--sc-blue);" />
+              <select value="{{ q.type }}" onChange="{{ q.setType }}" style="flex:none; background: var(--sc-btn-neutral); border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; font-weight: 600; padding: 10px 8px; cursor:pointer;">
+                <option value="mc">🔘 Multiple choice</option>
+                <option value="checkbox">☑️ Checkboxes</option>
+                <option value="short">✏️ Short answer</option>
+                <option value="dropdown">▾ Dropdown</option>
+                <option value="scale">↔ Linear scale</option>
+                <option value="image">🖼 Image only (no answer)</option>
+              </select>
+            </div>
+
+            <sc-if value="{{ q.hasImage }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; align-items:flex-start; gap:10px; padding-left: 6px;">
+                <div style="width: min(340px, 60%); height: 180px; border-radius: 10px; border: 1px solid var(--sc-line); background-color: #fff; display:flex; align-items:center; justify-content:center; overflow:hidden;">{{ q.imageEl }}</div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                  <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--sc-cyan); background: rgba(102,204,255,0.1); border: 1px solid rgba(102,204,255,0.3); border-radius: 6px; padding: 4px 8px;">{{ q.imageName }}</span>
+                  <sc-if value="{{ q.canAdjust }}" hint-placeholder-val="{{ false }}">
+                    <button onClick="{{ q.adjustCrop }}" style="align-self:flex-start; background: rgba(102,204,255,0.1); border: 1px solid rgba(102,204,255,0.35); border-radius: 8px; color: var(--sc-cyan); font-size: 12px; font-weight: 700; padding: 5px 10px; cursor: pointer;" style-hover="border-color: var(--sc-cyan);">✂️ Adjust crop &amp; rotate</button>
+                  </sc-if>
+                  <label style="align-self:flex-start; display:inline-flex; align-items:center; gap:6px; background: transparent; border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 12px; font-weight: 600; padding: 5px 10px; cursor: pointer;" style-hover="color: var(--sc-green-bright); border-color: var(--sc-green);">📁 Replace with my own image<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange="{{ q.uploadImage }}" style="display:none;" /></label>
+                  <button onClick="{{ q.removeImage }}" style="align-self:flex-start; background: transparent; border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-muted); font-size: 12px; font-weight: 600; padding: 5px 10px; cursor: pointer;" style-hover="color: var(--sc-red-bright); border-color: var(--sc-red);">Remove image</button>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ q.noImage }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; gap:8px; flex-wrap:wrap; padding-left: 6px;">
+                <sc-if value="{{ q.canCropFromPage }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ q.adjustCrop }}" style="background: transparent; border: 1px dashed rgba(102,204,255,0.4); border-radius: 8px; color: var(--sc-cyan); font-size: 12.5px; font-weight: 600; padding: 6px 12px; cursor: pointer;" style-hover="border-color: var(--sc-cyan);">✂️ Crop an image from the scanned page</button>
+                </sc-if>
+                <label style="display:inline-flex; align-items:center; gap:6px; background: transparent; border: 1px dashed var(--sc-line-strong); border-radius: 8px; color: var(--sc-text-soft); font-size: 12.5px; font-weight: 600; padding: 6px 12px; cursor: pointer;" style-hover="color: var(--sc-green-bright); border-color: var(--sc-green);">📁 Upload my own image<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange="{{ q.uploadImage }}" style="display:none;" /></label>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ q.hasOptions }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; flex-direction:column; gap:8px; padding-left: 6px;">
+                <sc-for list="{{ q.optionRows }}" as="opt" hint-placeholder-count="2">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <button onClick="{{ opt.toggleCorrect }}" title="Mark as correct answer" style="flex:none; width:20px; height:20px; border-radius: {{ q.optGlyphRadius }}; border: 2px solid {{ opt.glyphLine }}; background: {{ opt.glyphFill }}; cursor:pointer; box-shadow: {{ opt.glyphGlow }}; padding:0;"></button>
+                    <input value="{{ opt.text }}" onChange="{{ opt.setText }}" placeholder="Option" style="flex:1; background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 15px; padding: 8px 10px; outline-color: var(--sc-blue);" />
+                    <button onClick="{{ opt.remove }}" title="Remove option" style="flex:none; width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--sc-line); background: transparent; color: var(--sc-text-muted); font-size: 15px; cursor: pointer;" style-hover="color: var(--sc-red-bright); border-color: var(--sc-red);">✕</button>
+                  </div>
+                </sc-for>
+                <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                  <button onClick="{{ q.addOption }}" style="background: transparent; border: 1px dashed var(--sc-line-strong); border-radius: 8px; color: var(--sc-text-muted); font-size: 14px; font-weight: 600; padding: 7px 12px; cursor:pointer;" style-hover="color: var(--sc-green-bright); border-color: var(--sc-green);">+ Add option</button>
+                  <span style="font-size: 12px; color: var(--sc-text-faint);">Click a circle to mark the correct answer (used for quiz scoring)</span>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ q.isScale }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-left: 6px;">
+                <select value="{{ q.scaleMin }}" onChange="{{ q.setScaleMin }}" style="background: var(--sc-btn-neutral); border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; padding: 8px;">
+                  <option value="0">0</option><option value="1">1</option>
+                </select>
+                <span style="color: var(--sc-text-faint);">to</span>
+                <select value="{{ q.scaleMax }}" onChange="{{ q.setScaleMax }}" style="background: var(--sc-btn-neutral); border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; padding: 8px;">
+                  <option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                </select>
+                <input value="{{ q.scaleMinLabel }}" onChange="{{ q.setScaleMinLabel }}" placeholder="Low label" style="width: 130px; background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; padding: 8px 10px;" />
+                <input value="{{ q.scaleMaxLabel }}" onChange="{{ q.setScaleMaxLabel }}" placeholder="High label" style="width: 130px; background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; padding: 8px 10px;" />
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ q.isShortWithAnswer }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; align-items:center; gap:8px; padding-left:6px;">
+                <span style="font-size:13px; color: var(--sc-green-bright); font-weight:700;">✓ Answer:</span>
+                <input value="{{ q.correctText }}" onChange="{{ q.setCorrectText }}" placeholder="Expected answer (optional)" style="flex:1; max-width:340px; background: var(--sc-input-bg); border: 1px solid rgba(63,195,95,0.35); border-radius: 8px; color: var(--sc-text-soft); font-size: 14px; padding: 8px 10px;" />
+              </div>
+            </sc-if>
+
+            <div style="display:flex; align-items:center; gap:8px; border-top: 1px solid var(--sc-glass-line); padding-top: 10px; flex-wrap:wrap;">
+              <label style="display:flex; align-items:center; gap:7px; font-size: 14px; color: var(--sc-text-soft); cursor:pointer; margin-right:auto;">
+                <input type="checkbox" checked="{{ q.required }}" onChange="{{ q.toggleRequired }}" style="accent-color: var(--sc-green); width: 16px; height: 16px;" />
+                Required
+              </label>
+              <button onClick="{{ q.moveUp }}" disabled="{{ q.isFirst }}" title="Move up" style="width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--sc-line); background: transparent; color: var(--sc-text-muted); cursor: pointer; font-size: 14px;">↑</button>
+              <button onClick="{{ q.moveDown }}" disabled="{{ q.isLast }}" title="Move down" style="width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--sc-line); background: transparent; color: var(--sc-text-muted); cursor: pointer; font-size: 14px;">↓</button>
+              <button onClick="{{ q.duplicate }}" title="Duplicate" style="height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--sc-line); background: transparent; color: var(--sc-text-muted); cursor: pointer; font-size: 13px; font-weight:600;">Duplicate</button>
+              <button onClick="{{ q.remove }}" title="Delete" style="height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid rgba(232,73,63,0.5); background: rgba(232,73,63,0.12); color: var(--sc-red-bright); cursor: pointer; font-size: 13px; font-weight:600;">Delete</button>
+            </div>
+            </sc-if>
+          </div>
+        </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ================= FILL MODE ================= -->
+    <sc-if value="{{ isFill }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Fill form" style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 18px; padding: 20px 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); display:flex; flex-direction:column; gap:6px;">
+          <span style="display:inline-flex; align-items:center; gap:7px; font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--sc-text-muted);"><span style="width:7px; height:7px; border-radius:999px; background: var(--sc-purple); box-shadow: 0 0 7px var(--sc-purple);"></span>Preview form</span>
+          <div style="font-family: var(--font-display); font-weight: 900; font-size: 26px;">{{ formTitleShown }}</div>
+          <sc-if value="{{ hasDesc }}" hint-placeholder-val="{{ false }}">
+            <div style="color: var(--sc-text-soft); font-size: 15px;">{{ formDesc }}</div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div style="background: var(--sc-glass); border: 1px solid rgba(63,195,95,0.4); border-radius: 18px; padding: 40px 24px; text-align: center; box-shadow: 0 0 20px rgba(63,195,95,0.14), 0 8px 24px rgba(0,0,0,0.3); display:flex; flex-direction:column; align-items:center; gap:12px;">
+            <div style="font-size: 40px;">🎉</div>
+            <div style="font-family: var(--font-display); font-weight: 900; font-size: 22px; color: var(--sc-green-bright);">Response recorded!</div>
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ false }}" onClick="{{ resetFill }}" hint-size="220px,44px">Submit another response</x-import>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showFillForm }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ noQuestions }}" hint-placeholder-val="{{ false }}">
+            <div style="background: var(--sc-glass-soft); border: 1px dashed var(--sc-line-strong); border-radius: 20px; padding: 40px; text-align:center; color: var(--sc-text-muted);">This form has no questions yet — add some in the editor.</div>
+          </sc-if>
+          <sc-for list="{{ fillQuestions }}" as="q" hint-placeholder-count="2">
+            <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid {{ q.borderColor }}; border-radius: 20px; padding: 18px 20px; box-shadow: 0 8px 22px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:12px;">
+              <div style="font-size: 17px; font-weight: 700; font-family: var(--font-display);">{{ q.title }}<span style="color: var(--sc-red-bright);">{{ q.star }}</span></div>
+
+              <sc-if value="{{ q.hasImage }}" hint-placeholder-val="{{ false }}">
+                <div style="width: min(520px, 100%); height: 300px; border-radius: 10px; border: 1px solid var(--sc-line); background-color: #fff; display:flex; align-items:center; justify-content:center; overflow:hidden;">{{ q.imageEl }}</div>
+              </sc-if>
+
+              <sc-if value="{{ q.isChoice }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex; flex-direction:column; gap:8px;">
+                  <sc-for list="{{ q.optionRows }}" as="opt" hint-placeholder-count="3">
+                    <button onClick="{{ opt.pick }}" style="display:flex; align-items:center; gap:10px; text-align:left; background: {{ opt.bg }}; border: 1px solid {{ opt.line }}; border-radius: 12px; color: var(--sc-text); font-size: 15px; padding: 12px 14px; cursor: pointer; transition: all 120ms ease-out;" style-hover="border-color: var(--sc-line-strong);">
+                      <span style="flex:none; width:16px; height:16px; border-radius: {{ q.optGlyphRadius }}; border: 2px solid {{ opt.glyphLine }}; background: {{ opt.glyphFill }}; box-shadow: {{ opt.glyphGlow }};"></span>
+                      {{ opt.text }}
+                    </button>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ q.isShort }}" hint-placeholder-val="{{ false }}">
+                <input value="{{ q.answerText }}" onChange="{{ q.setText }}" placeholder="Your answer" style="background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text); font-size: 15px; padding: 12px 14px; outline-color: var(--sc-blue);" />
+              </sc-if>
+
+              <sc-if value="{{ q.isDropdown }}" hint-placeholder-val="{{ false }}">
+                <select value="{{ q.answerText }}" onChange="{{ q.setText }}" style="background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 8px; color: var(--sc-text); font-size: 15px; padding: 12px 10px; max-width: 340px;">
+                  <option value="">Choose…</option>
+                  <sc-for list="{{ q.plainOptions }}" as="po" hint-placeholder-count="3">
+                    <option value="{{ po.text }}">{{ po.text }}</option>
+                  </sc-for>
+                </select>
+              </sc-if>
+
+              <sc-if value="{{ q.isScale }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <span style="font-size: 13px; color: var(--sc-text-muted);">{{ q.scaleMinLabel }}</span>
+                  <sc-for list="{{ q.scaleRows }}" as="s" hint-placeholder-count="5">
+                    <button onClick="{{ s.pick }}" style="width: 44px; height: 44px; border-radius: 999px; border: 2px solid {{ s.line }}; background: {{ s.bg }}; color: {{ s.color }}; font-family: var(--font-display); font-weight: 800; font-size: 16px; cursor: pointer; box-shadow: {{ s.glow }}; transition: all 120ms ease-out;">{{ s.n }}</button>
+                  </sc-for>
+                  <span style="font-size: 13px; color: var(--sc-text-muted);">{{ q.scaleMaxLabel }}</span>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+          <sc-if value="{{ hasQuestions }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex; gap:10px;">
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ false }}" onClick="{{ submitFill }}" hint-size="140px,48px">Submit</x-import>
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="ghost" block="{{ false }}" onClick="{{ clearFill }}" hint-size="130px,48px">Clear form</x-import>
+            </div>
+          </sc-if>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <!-- ================= RESPONSES MODE ================= -->
+    <sc-if value="{{ isResponses }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Responses" style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 18px; padding: 18px 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <div>
+            <div style="font-family: var(--font-display); font-weight: 900; font-size: 34px; color: var(--sc-blue-bright); line-height:1.1;">{{ responseCount }}</div>
+            <div style="display:inline-flex; align-items:center; gap:7px; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--sc-text-muted); font-weight: 800;"><span style="width:7px; height:7px; border-radius:999px; background: var(--sc-blue); box-shadow: 0 0 7px var(--sc-blue);"></span>Responses</div>
+          </div>
+          <div style="margin-left:auto;">
+            <sc-if value="{{ hasResponses }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="danger" block="{{ false }}" onClick="{{ clearResponses }}" hint-size="170px,40px">Clear responses</x-import>
+            </sc-if>
+          </div>
+        </div>
+
+        <sc-if value="{{ noResponses }}" hint-placeholder-val="{{ false }}">
+          <div style="background: var(--sc-glass-soft); border: 1px dashed var(--sc-line-strong); border-radius: 20px; padding: 44px 24px; text-align:center; color: var(--sc-text-muted); font-size: 15px;">No responses yet. Switch to <b style="color: var(--sc-text-soft);">Fill</b> and submit one to see results here.</div>
+        </sc-if>
+
+        <sc-for list="{{ resultCards }}" as="r" hint-placeholder-count="2">
+          <div style="background: var(--sc-glass); backdrop-filter: blur(6px); border: 1px solid var(--sc-glass-line); border-radius: 20px; padding: 18px 20px; box-shadow: 0 8px 22px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 16px;">{{ r.title }}</span>
+              <span style="font-size: 12px; color: var(--sc-text-faint); font-weight:600;">{{ r.typeLabel }} · {{ r.answered }} answered</span>
+            </div>
+            <sc-if value="{{ r.isBars }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <sc-for list="{{ r.bars }}" as="b" hint-placeholder-count="3">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="flex:none; width: 130px; font-size: 13px; color: var(--sc-text-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:right;">{{ b.label }}</span>
+                    <div style="flex:1; height: 18px; background: var(--sc-input-bg); border-radius: 999px; overflow:hidden; border: 1px solid var(--sc-glass-line);">
+                      <div style="height:100%; width: {{ b.pct }}%; background: linear-gradient(180deg, var(--sc-green-bright), var(--sc-green-btn)); border-radius: 999px; box-shadow: 0 0 10px rgba(63,195,95,0.5); transition: width 280ms ease-out;"></div>
+                    </div>
+                    <span style="flex:none; width: 34px; font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--sc-green-bright);">{{ b.count }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ r.isText }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <sc-for list="{{ r.texts }}" as="t" hint-placeholder-count="2">
+                  <div style="background: var(--sc-input-bg); border: 1px solid var(--sc-glass-line); border-radius: 8px; padding: 9px 12px; font-size: 14px; color: var(--sc-text-soft);">{{ t.text }}</div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ================= TRANSCRIBE MODAL ================= -->
+  <sc-if value="{{ showImport }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; background: rgba(4,7,12,0.72); backdrop-filter: blur(3px); z-index: 50; display:flex; align-items:center; justify-content:center; padding: 20px;" onClick="{{ closeImport }}">
+      <div onClick="{{ stopProp }}" style="width: 680px; max-width: 100%; max-height: 88vh; overflow:auto; background: var(--sc-ink-900); border: 2px solid var(--sc-yellow); border-radius: 20px; padding: 24px; box-shadow: 0 0 30px rgba(255,182,39,0.22), 0 20px 50px rgba(0,0,0,0.6); display:flex; flex-direction:column; gap:14px;">
+        <div style="font-family: var(--font-display); font-weight: 900; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-yellow);">🤖 Transcribe with Claude</div>
+        <div style="font-size: 14px; color: var(--sc-text-soft); line-height: 1.5;">Upload your <b>worksheet</b> (PDF or photo) and optionally the <b>answer key</b>. Claude reads them with vision and transcribes every question into the form — correct answers included, for quiz scoring in the exported Google Form.</div>
+        <div style="font-size: 13px; color: var(--sc-text-muted); background: rgba(102,204,255,0.08); border: 1px solid rgba(102,204,255,0.25); border-radius: 8px; padding: 10px 12px;">🔑 No API key needed — Claude is built into this prototype and runs in your browser.</div>
+
+        <sc-if value="{{ notExtracting }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px;">
+            <label style="display:flex; flex-direction:column; align-items:center; gap:8px; padding: 22px 14px; border: 2px dashed {{ qFileLine }}; border-radius: 16px; cursor: pointer; text-align:center; transition: border-color 120ms ease-out;" style-hover="border-color: var(--sc-yellow);">
+              <span style="font-size: 28px;">📝</span>
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 15px; color: {{ qFileColor }};">{{ qFileLabel }}</span>
+              <span style="font-size: 12px; color: var(--sc-text-faint);">Question paper / worksheet · PDF or image</span>
+              <input type="file" accept=".pdf,image/png,image/jpeg,image/webp,image/gif" onChange="{{ pickQuestionsFile }}" style="display:none;" />
+            </label>
+            <label style="display:flex; flex-direction:column; align-items:center; gap:8px; padding: 22px 14px; border: 2px dashed {{ aFileLine }}; border-radius: 16px; cursor: pointer; text-align:center; transition: border-color 120ms ease-out;" style-hover="border-color: var(--sc-green);">
+              <span style="font-size: 28px;">✅</span>
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 15px; color: {{ aFileColor }};">{{ aFileLabel }}</span>
+              <span style="font-size: 12px; color: var(--sc-text-faint);">Answer key / mark scheme · optional</span>
+              <input type="file" accept=".pdf,image/png,image/jpeg,image/webp,image/gif" onChange="{{ pickAnswersFile }}" style="display:none;" />
+            </label>
+          </div>
+
+          <details style="border: 1px solid var(--sc-glass-line); border-radius: 12px; padding: 10px 14px;">
+            <summary style="font-size: 13px; font-weight: 700; color: var(--sc-text-muted); cursor: pointer;">Or paste text instead</summary>
+            <textarea value="{{ importText }}" onChange="{{ setImportText }}" rows="7" placeholder="Paste worksheet text here — Claude will structure it into questions." style="width: 100%; box-sizing: border-box; margin-top: 10px; background: var(--sc-input-bg); border: 1px solid var(--sc-input-line); border-radius: 10px; color: var(--sc-text); font-family: var(--font-mono); font-size: 13px; line-height: 1.5; padding: 12px; resize: vertical; outline-color: var(--sc-yellow);"></textarea>
+          </details>
+
+          <sc-if value="{{ hasImportError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 13px; color: var(--sc-red-bright); background: rgba(232,73,63,0.1); border: 1px solid rgba(232,73,63,0.4); border-radius: 8px; padding: 10px 12px;">{{ importError }}</div>
+          </sc-if>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ false }}" onClick="{{ runExtraction }}" hint-size="210px,44px">🔍 Extract questions</x-import>
+            <span style="margin-left:auto;"><x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="ghost" block="{{ false }}" onClick="{{ closeImport }}" hint-size="100px,44px">Cancel</x-import></span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isExtracting }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:14px; padding: 26px 10px;">
+            <div style="font-size: 34px;">🔍</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--sc-cyan);">Claude is reading your document…</div>
+            <div style="width: 100%; max-width: 380px; height: 10px; background: var(--sc-input-bg); border-radius: 999px; overflow: hidden; border: 1px solid var(--sc-glass-line); position: relative;">
+              <div style="position:absolute; top:0; left:0; height:100%; width: 40%; background: linear-gradient(90deg, transparent, var(--sc-cyan), transparent); animation: sc-scan 1.2s linear infinite;"></div>
+            </div>
+            <div style="font-size: 13px; color: var(--sc-text-muted);">{{ extractStatus }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= EXPORT MODAL ================= -->
+  <sc-if value="{{ showExport }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; background: rgba(4,7,12,0.72); backdrop-filter: blur(3px); z-index: 50; display:flex; align-items:center; justify-content:center; padding: 20px;" onClick="{{ closeExport }}">
+      <div onClick="{{ stopProp }}" style="width: 700px; max-width: 100%; max-height: 88vh; overflow:auto; background: var(--sc-ink-900); border: 2px solid var(--sc-green); border-radius: 20px; padding: 24px; box-shadow: 0 0 30px rgba(63,195,95,0.22), 0 20px 50px rgba(0,0,0,0.6); display:flex; flex-direction:column; gap:14px;">
+        <div style="font-family: var(--font-display); font-weight: 900; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-green-bright);">⚙️ Google Apps Script</div>
+        <sc-if value="{{ hasDupes }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:8px; background: rgba(232,73,63,0.12); border: 1px solid rgba(232,73,63,0.5); border-radius: 10px; padding: 12px 14px;">
+            <div style="font-size: 13px; line-height: 1.5; color: var(--sc-red-bright); font-weight: 600;">{{ dupWarning }}</div>
+            <button onClick="{{ removeDuplicates }}" style="align-self:flex-start; background: rgba(232,73,63,0.18); border: 1px solid rgba(232,73,63,0.55); border-radius: 8px; color: var(--sc-red-bright); font-size: 12.5px; font-weight: 700; padding: 7px 12px; cursor: pointer;" style-hover="background: rgba(232,73,63,0.28);">Remove duplicate questions</button>
+          </div>
+        </sc-if>
+        <div style="font-size: 14px; color: var(--sc-text-soft); line-height: 1.5;">This prototype can't reach Google Drive directly, so it generates a script: go to <span style="font-family: var(--font-mono); color: var(--sc-cyan);">script.google.com</span> → New project → paste → Run <span style="font-family: var(--font-mono); color: var(--sc-cyan);">createForm</span> → authorize. The Google Form appears in your Drive{{ quizNote }}. Question images are embedded in the script and upload into the form automatically.</div>
+        <sc-if value="{{ anyImages }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size: 13px; color: var(--sc-text-muted); background: rgba(102,204,255,0.08); border: 1px solid rgba(102,204,255,0.25); border-radius: 8px; padding: 10px 12px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+            <span style="flex:1; min-width:220px;">🖼 Some questions have figures. Download the <b style="color: var(--sc-text-soft);">{{ imagesFolderName }}</b> images folder and insert each file (e.g. <span style="font-family: var(--font-mono); color: var(--sc-cyan);">MCQ5.jpg</span>) into the matching question in the Google Form editor — the script marks them with ⚠ comments.</span>
+            <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ false }}" onClick="{{ downloadImages }}" hint-size="190px,40px">🖼 Download images</x-import>
+          </div>
+        </sc-if>
+        <textarea readOnly value="{{ scriptText }}" rows="14" style="background: var(--sc-black); border: 1px solid var(--sc-input-line); border-radius: 12px; color: var(--sc-green-bright); font-family: var(--font-mono); font-size: 12.5px; line-height: 1.55; padding: 14px; resize: vertical; white-space: pre;"></textarea>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ false }}" onClick="{{ copyScript }}" hint-size="160px,44px">📋 Copy script</x-import>
+          <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ false }}" onClick="{{ downloadScript }}" hint-size="180px,44px">⬇ Download .gs</x-import>
+          <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="neutral" block="{{ false }}" onClick="{{ downloadWord }}" hint-size="180px,44px">📄 Download Word</x-import>
+          <span style="margin-left:auto;"><x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="ghost" block="{{ false }}" onClick="{{ closeExport }}" hint-size="100px,44px">Close</x-import></span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= CROP EDITOR MODAL ================= -->
+  <sc-if value="{{ showCrop }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; background: rgba(4,7,12,0.72); backdrop-filter: blur(3px); z-index: 60; display:flex; align-items:center; justify-content:center; padding: 20px;" onClick="{{ cancelCrop }}">
+      <div onClick="{{ stopProp }}" style="width: 560px; max-width: 100%; max-height: 92vh; overflow:auto; background: var(--sc-ink-900); border: 2px solid var(--sc-cyan); border-radius: 20px; padding: 22px; box-shadow: 0 0 30px rgba(102,204,255,0.22), 0 20px 50px rgba(0,0,0,0.6); display:flex; flex-direction:column; gap:14px;">
+        <div style="font-family: var(--font-display); font-weight: 900; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-cyan);">✂️ Adjust Crop</div>
+        <div style="font-size: 13px; color: var(--sc-text-muted);">Drag the sliders to set where the image starts and ends on the scanned page. The bright band is what gets saved.</div>
+        <div style="position: relative; width: min(400px, 100%); margin: 0 auto; aspect-ratio: {{ cropAspect }}; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid var(--sc-line);">
+          {{ cropPageImg }}
+          <div style="position:absolute; left:0; right:0; top:0; height: {{ cropTop }}%; background: rgba(4,7,12,0.78); border-bottom: 2px solid var(--sc-cyan); box-shadow: 0 2px 10px rgba(102,204,255,0.4);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; height: {{ cropBottomMask }}%; background: rgba(4,7,12,0.78); border-top: 2px solid var(--sc-cyan); box-shadow: 0 -2px 10px rgba(102,204,255,0.4);"></div>
+          <div style="position:absolute; top:0; bottom:0; left:0; width: {{ cropLeft }}%; background: rgba(4,7,12,0.78); border-right: 2px solid var(--sc-cyan);"></div>
+          <div style="position:absolute; top:0; bottom:0; right:0; width: {{ cropRightMask }}%; background: rgba(4,7,12,0.78); border-left: 2px solid var(--sc-cyan);"></div>
+        </div>
+        <sc-if value="{{ cropSrcBlank }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:10px; background: rgba(232,73,63,0.1); border: 1px solid rgba(232,73,63,0.4); border-radius: 12px; padding: 12px 14px;">
+            <div style="font-size: 13.5px; color: var(--sc-red-bright); font-weight: 700;">⚠ This scanned page is blank white — the scan format could not be drawn.</div>
+            <div style="font-size: 13px; color: var(--sc-text-soft); line-height: 1.5;">Take a photo or screenshot of this question and upload it here instead. (Or re-save the PDF on a computer via Print → "Save as PDF" and re-import.)</div>
+            <label style="align-self:flex-start; display:inline-flex; align-items:center; gap:6px; background: var(--sc-btn-neutral); border: 1px solid var(--sc-green); border-radius: 8px; color: var(--sc-green-bright); font-size: 13px; font-weight: 700; padding: 8px 14px; cursor: pointer;">📷 Upload a photo of this question<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange="{{ cropUploadPhoto }}" style="display:none;" /></label>
+          </div>
+        </sc-if>
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <button onClick="{{ rotateLeft }}" style="background: var(--sc-btn-neutral); border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 13px; font-weight: 700; padding: 8px 14px; cursor: pointer;" style-hover="border-color: var(--sc-cyan); color: var(--sc-cyan);">⟲ Rotate left</button>
+          <button onClick="{{ rotateRight }}" style="background: var(--sc-btn-neutral); border: 1px solid var(--sc-line); border-radius: 8px; color: var(--sc-text-soft); font-size: 13px; font-weight: 700; padding: 8px 14px; cursor: pointer;" style-hover="border-color: var(--sc-cyan); color: var(--sc-cyan);">⟳ Rotate right</button>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <label style="display:flex; align-items:center; gap:12px; font-size: 14px; font-weight: 700; color: var(--sc-text-soft);">
+            <span style="width: 64px;">Top</span>
+            <input type="range" min="0" max="100" step="0.5" value="{{ cropTop }}" onChange="{{ setCropTop }}" style="flex:1; accent-color: var(--sc-cyan); height: 24px; cursor: pointer;" />
+          </label>
+          <label style="display:flex; align-items:center; gap:12px; font-size: 14px; font-weight: 700; color: var(--sc-text-soft);">
+            <span style="width: 64px;">Bottom</span>
+            <input type="range" min="0" max="100" step="0.5" value="{{ cropBottom }}" onChange="{{ setCropBottom }}" style="flex:1; accent-color: var(--sc-cyan); height: 24px; cursor: pointer;" />
+          </label>
+          <label style="display:flex; align-items:center; gap:12px; font-size: 14px; font-weight: 700; color: var(--sc-text-soft);">
+            <span style="width: 64px;">Left</span>
+            <input type="range" min="0" max="100" step="0.5" value="{{ cropLeft }}" onChange="{{ setCropLeft }}" style="flex:1; accent-color: var(--sc-cyan); height: 24px; cursor: pointer;" />
+          </label>
+          <label style="display:flex; align-items:center; gap:12px; font-size: 14px; font-weight: 700; color: var(--sc-text-soft);">
+            <span style="width: 64px;">Right</span>
+            <input type="range" min="0" max="100" step="0.5" value="{{ cropRight }}" onChange="{{ setCropRight }}" style="flex:1; accent-color: var(--sc-cyan); height: 24px; cursor: pointer;" />
+          </label>
+          <label style="display:flex; align-items:center; gap:12px; font-size: 14px; font-weight: 700; color: var(--sc-text-soft);">
+            <span style="width: 64px;">Contrast</span>
+            <input type="range" min="50" max="200" step="5" value="{{ cropContrast }}" onChange="{{ setCropContrast }}" style="flex:1; accent-color: var(--sc-yellow); height: 24px; cursor: pointer;" />
+            <span style="width: 44px; text-align:right; font-family: var(--font-mono); font-size: 12px; color: var(--sc-text-muted);">{{ cropContrast }}%</span>
+          </label>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ false }}" onClick="{{ applyCrop }}" hint-size="150px,44px">Apply crop</x-import>
+          <span style="margin-left:auto;"><x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="ghost" block="{{ false }}" onClick="{{ cancelCrop }}" hint-size="100px,44px">Cancel</x-import></span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= EYE REST REMINDER ================= -->
+  <sc-if value="{{ showEyeRest }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; background: rgba(4,7,12,0.75); backdrop-filter: blur(4px); z-index: 95; display:flex; align-items:center; justify-content:center; padding: 20px;">
+      <div style="max-width: 430px; width: 100%; background: var(--sc-ink-900); border: 2px solid var(--sc-green); border-radius: 20px; padding: 30px 26px; text-align:center; box-shadow: 0 0 28px rgba(63,195,95,0.28), 0 20px 50px rgba(0,0,0,0.6); display:flex; flex-direction:column; align-items:center; gap:10px;">
+        <div style="font-size: 40px;">🌿</div>
+        <div style="font-family: var(--font-display); font-weight: 900; font-size: 20px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sc-green-bright);">Time for an eye break!</div>
+        <div style="font-size: 15px; line-height: 1.55; color: var(--sc-text-soft);">You’ve been working hard for 40 minutes — wonderful effort! ✨</div>
+        <div style="font-size: 14px; line-height: 1.55; color: var(--sc-text-muted); margin-bottom: 10px;">Look at something far away (about 6 metres) for 20 seconds, blink slowly, and maybe stretch or sip some water. Your eyes will thank you!</div>
+        <x-import component-from-global-scope="ScienceClawDesignSystem_0049d4.Button" variant="primary" block="{{ false }}" onClick="{{ restEyesDone }}" hint-size="230px,48px">I’ve rested my eyes 💚</x-import>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Toast -->
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 90; background: var(--sc-ink-900); border: 2px solid {{ toastLine }}; color: var(--sc-text); font-family: var(--font-display); font-weight: 800; font-size: 15px; padding: 12px 20px; border-radius: 999px; box-shadow: 0 0 20px {{ toastGlow }}, 0 10px 30px rgba(0,0,0,0.5); animation: sc-toast-in 180ms ease-out; white-space: nowrap;">{{ toastMsg }}</div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem('sc-form-creator-v1')); } catch (e) {}
+    this.state = {
+      mode: 'edit',
+      theme: (() => { try { return localStorage.getItem('sc-form-creator-theme') || 'dark'; } catch (e) { return 'dark'; } })(),
+      formTitle: (saved && saved.formTitle) || '',
+      formDesc: (saved && saved.formDesc) || '',
+      questions: (saved && saved.questions) || [],
+      responses: (saved && saved.responses) || [],
+      srcPages: (saved && saved.srcPages) || [],
+      cropEdit: null,
+      fillAnswers: {},
+      submitted: false,
+      openQ: null,
+      showImport: false,
+      showExport: false,
+      importText: '',
+      importError: '',
+      extracting: false,
+      extractStatus: '',
+      qFile: null,   // {name, mediaType, data(base64), isPdf, isText, text}
+      aFile: null,
+      toast: null
+    };
+    this._uid = Date.now();
+    this.state.eyeStart = Date.now();
+    this.state.eyeElapsed = 0;
+    this.state.showEyeRest = false;
+  }
+
+  componentDidMount() {
+    this._eyeT = setInterval(() => {
+      const el = Date.now() - this.state.eyeStart;
+      const due = el >= 40 * 60000;
+      this.setState(st => ({ eyeElapsed: el, showEyeRest: st.showEyeRest || due }));
+    }, 1000);
+  }
+
+  componentWillUnmount() { clearInterval(this._eyeT); }
+
+  fmtEye(ms) {
+    const s = Math.floor(ms / 1000), m = Math.floor(s / 60);
+    return m + ':' + ('0' + (s % 60)).slice(-2);
+  }
+
+  uid() { return 'q' + (this._uid++); }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState &&
+        prevState.formTitle === this.state.formTitle &&
+        prevState.formDesc === this.state.formDesc &&
+        prevState.questions === this.state.questions &&
+        prevState.responses === this.state.responses &&
+        prevState.srcPages === this.state.srcPages) return; // only the eye timer ticked — skip the save
+    const data = {
+      formTitle: this.state.formTitle,
+      formDesc: this.state.formDesc,
+      questions: this.state.questions,
+      responses: this.state.responses,
+      srcPages: this.state.srcPages
+    };
+    try {
+      localStorage.setItem('sc-form-creator-v1', JSON.stringify(data));
+    } catch (e) {
+      // Quota exceeded (page scans + crops are big) — degrade gracefully.
+      try {
+        const noPages = Object.assign({}, data, { srcPages: [] });
+        localStorage.setItem('sc-form-creator-v1', JSON.stringify(noPages));
+      } catch (e2) {
+        try {
+          const slim = { formTitle: data.formTitle, formDesc: data.formDesc, responses: data.responses, srcPages: [], questions: data.questions.map(q => { const c = Object.assign({}, q); delete c.image; return c; }) };
+          localStorage.setItem('sc-form-creator-v1', JSON.stringify(slim));
+        } catch (e3) {}
+      }
+    }
+  }
+
+  // ---------- Manual crop editor ----------
+  decodeB64Image(b64) {
+    return new Promise((res, rej) => {
+      const im = new Image();
+      im.onload = () => res(im);
+      im.onerror = () => rej(new Error('decode failed'));
+      im.src = 'data:image/jpeg;base64,' + b64;
+    });
+  }
+
+  async openCropEditor(q) {
+    const srcB64 = q.customSrc || this.state.srcPages[q.srcPage] || (q.image ? String(q.image).split(',')[1] : null);
+    if (!srcB64) { this.toast('Source page not available for this question', 'red'); return; }
+    try {
+      const img = await this.decodeB64Image(srcB64);
+      const crop = q.crop || { top: 0, bottom: 100 };
+      if (crop.left == null) crop.left = 0;
+      if (crop.right == null) crop.right = 100;
+      if (!crop.contrast) crop.contrast = 100;
+      const cnv = document.createElement('canvas');
+      cnv.width = img.width; cnv.height = img.height;
+      const cctx = cnv.getContext('2d');
+      cctx.drawImage(img, 0, 0);
+      const srcBlank = this.canvasIsBlank(cnv);
+      const fromPage = !q.customSrc && this.state.srcPages[q.srcPage];
+      const usingOwnImage = !q.customSrc && !fromPage;
+      this.setState({ cropEdit: {
+        qid: q.id,
+        top: usingOwnImage ? 0 : Math.max(0, crop.top),
+        bottom: usingOwnImage ? 100 : Math.min(100, crop.bottom),
+        left: usingOwnImage ? 0 : crop.left,
+        right: usingOwnImage ? 100 : crop.right,
+        contrast: crop.contrast,
+        aspect: img.width + ' / ' + img.height,
+        pageIdx: fromPage ? q.srcPage : null,
+        custom: q.customSrc || (fromPage ? null : srcB64),
+        srcBlank: srcBlank
+      } });
+    } catch (e) { this.toast('Could not open the source page', 'red'); }
+  }
+
+  uploadQuestionImage(e, qid) {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = async () => {
+      try {
+        const im = await new Promise((res, rej) => { const i2 = new Image(); i2.onload = () => res(i2); i2.onerror = () => rej(new Error('bad image')); i2.src = String(reader.result); });
+        const scale = Math.min(1, 1600 / Math.max(im.width, im.height));
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.max(1, Math.round(im.width * scale));
+        canvas.height = Math.max(1, Math.round(im.height * scale));
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(im, 0, 0, canvas.width, canvas.height);
+        const b64 = canvas.toDataURL('image/jpeg', 0.87).split(',')[1];
+        this.setState({ cropEdit: { qid: qid, top: 0, bottom: 100, left: 0, right: 100, contrast: 100, aspect: canvas.width + ' / ' + canvas.height, pageIdx: null, custom: b64 } });
+      } catch (err) { this.toast('Could not read that image — try a JPG or PNG', 'red'); }
+    };
+    reader.readAsDataURL(file);
+  }
+
+  async rotateCropSource(dir) {
+    const ce = this.state.cropEdit;
+    if (!ce) return;
+    const src = ce.custom || this.state.srcPages[ce.pageIdx];
+    if (!src) return;
+    try {
+      const im = await this.decodeB64Image(src);
+      const canvas = document.createElement('canvas');
+      canvas.width = im.height; canvas.height = im.width;
+      const ctx = canvas.getContext('2d');
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate(dir * Math.PI / 2);
+      ctx.drawImage(im, -im.width / 2, -im.height / 2);
+      const b64 = canvas.toDataURL('image/jpeg', 0.87).split(',')[1];
+      this.setState({ cropEdit: Object.assign({}, ce, { custom: b64, aspect: canvas.width + ' / ' + canvas.height, top: 0, bottom: 100, left: 0, right: 100 }) });
+    } catch (e) { this.toast('Rotate failed — try again', 'red'); }
+  }
+
+  async applyCrop() {
+    const ce = this.state.cropEdit;
+    if (!ce) return;
+    const q = this.state.questions.find(x => x.id === ce.qid);
+    const srcB64 = ce.custom || this.state.srcPages[ce.pageIdx];
+    if (!q || !srcB64) { this.setState({ cropEdit: null }); return; }
+    try {
+      const region = { top: ce.top, bottom: ce.bottom, left: ce.left || 0, right: ce.right == null ? 100 : ce.right, contrast: ce.contrast || 100 };
+      const crop = await this.cropRegion(srcB64, region, 0);
+      if (!crop) { this.toast('Crop region is too small', 'red'); return; }
+      const idx = this.state.questions.indexOf(q);
+      this.updateQ(q.id, { image: crop, crop: region, customSrc: ce.custom || q.customSrc || null, imageName: q.imageName || this.imageNameFor(q, idx) });
+      this.setState({ cropEdit: null });
+      this.toast('Crop updated ✂️', 'green');
+    } catch (e) { this.toast('Crop failed — try again', 'red'); }
+  }
+
+  folderName() {
+    return (this.state.formTitle || 'worksheet').replace(/[\\/:*?"<>|]/g, '').trim() || 'worksheet';
+  }
+
+  downloadImagesZip() {
+    if (!window.JSZip) { this.toast('ZIP library still loading — try again', 'red'); return; }
+    const withImg = this.state.questions.filter(q => q.image);
+    if (!withImg.length) { this.toast('No question images to download', 'red'); return; }
+    const zip = new JSZip();
+    const folder = zip.folder(this.folderName());
+    const used = {};
+    withImg.forEach((q, i) => {
+      let name = q.imageName || this.imageNameFor(q, i);
+      if (used[name]) { name = name + '_' + (++used[name]); } else { used[name] = 1; }
+      folder.file(name + '.jpg', q.image.split(',')[1], { base64: true });
+    });
+    zip.generateAsync({ type: 'blob' }).then(blob => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = this.folderName() + ' - images.zip';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      this.toast('Downloaded ' + withImg.length + ' question image' + (withImg.length > 1 ? 's' : '') + ' 🖼', 'green');
+    });
+  }
+
+  toast(msg, color) {
+    clearTimeout(this._toastT);
+    this.setState({ toast: { msg: msg, color: color || 'green' } });
+    this._toastT = setTimeout(() => this.setState({ toast: null }), 2800);
+  }
+
+  updateQ(id, patch) {
+    this.setState(s => ({ questions: s.questions.map(q => q.id === id ? Object.assign({}, q, patch) : q) }));
+  }
+
+  blankQuestion(type) {
+    return {
+      id: this.uid(), type: type || 'mc', title: '', required: false,
+      options: ['Option 1', 'Option 2'], correct: null,
+      scaleMin: 1, scaleMax: 5, scaleMinLabel: '', scaleMaxLabel: ''
+    };
+  }
+
+  // ---------- File handling ----------
+  // The built-in Claude bridge caps each request at ~256 KB, so PDFs are
+  // rendered to compressed JPEG page images in the browser and sent one
+  // page per call.
+  compressCanvas(canvas) {
+    let q = 0.8;
+    let c = canvas;
+    for (let attempt = 0; attempt < 8; attempt++) {
+      const b64 = c.toDataURL('image/jpeg', q).split(',')[1];
+      if (b64.length <= 220000) return b64;
+      if (q > 0.45) { q -= 0.15; }
+      else {
+        const nc = document.createElement('canvas');
+        nc.width = Math.max(600, Math.round(c.width * 0.75));
+        nc.height = Math.round(c.height * (nc.width / c.width));
+        nc.getContext('2d').drawImage(c, 0, 0, nc.width, nc.height);
+        c = nc; q = 0.7;
+      }
+    }
+    return c.toDataURL('image/jpeg', 0.35).split(',')[1];
+  }
+
+  async pdfToPages(file) {
+    for (let w = 0; !window.pdfjsLib && w < 40; w++) await new Promise(r => setTimeout(r, 250));
+    if (!window.pdfjsLib) throw new Error('PDF reader could not load — check your connection and re-pick the file.');
+    const buf = await file.arrayBuffer();
+    const doc = await window.pdfjsLib.getDocument({ data: buf }).promise;
+    const n = Math.min(doc.numPages, 30);
+    const pages = [];
+    let blank = 0;
+    for (let i = 1; i <= n; i++) {
+      const page = await doc.getPage(i);
+      const vp1 = page.getViewport({ scale: 1 });
+      const vp = page.getViewport({ scale: Math.min(2.2, 1500 / vp1.width) });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(vp.width);
+      canvas.height = Math.round(vp.height);
+      await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+      if (this.canvasIsBlank(canvas)) blank++;
+      pages.push(this.compressCanvas(canvas));
+    }
+    return { pages: pages, truncated: doc.numPages > n, blankPages: blank };
+  }
+
+  canvasIsBlank(canvas) {
+    const w = 48, h = 64, c = document.createElement('canvas');
+    c.width = w; c.height = h;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(canvas, 0, 0, w, h);
+    const d = ctx.getImageData(0, 0, w, h).data;
+    let nonWhite = 0;
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i + 3] > 10 && (d[i] < 235 || d[i + 1] < 235 || d[i + 2] < 235)) nonWhite++;
+    }
+    return nonWhite < (w * h) * 0.005;
+  }
+
+  async imageToPage(file) {
+    const url = URL.createObjectURL(file);
+    try {
+      const img = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => rej(new Error('Could not decode image')); im.src = url; });
+      const scale = Math.min(1, 1500 / img.naturalWidth);
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.naturalWidth * scale);
+      canvas.height = Math.round(img.naturalHeight * scale);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      return { pages: [this.compressCanvas(canvas)], truncated: false };
+    } finally { URL.revokeObjectURL(url); }
+  }
+
+  readPicked(e, key) {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if (!file) return;
+    if (file.size > 30 * 1024 * 1024) { this.setState({ importError: 'File is too large (max 30 MB).' }); return; }
+    const isText = /\.(txt|md|text)$/i.test(file.name) || file.type.indexOf('text/') === 0;
+    if (isText) {
+      const reader = new FileReader();
+      reader.onload = () => this.setState({ [key]: { name: file.name, isText: true, text: String(reader.result) }, importError: '' });
+      reader.readAsText(file);
+      return;
+    }
+    this.setState({ [key]: { name: file.name, preparing: true }, importError: '' });
+    const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
+    (isPdf ? this.pdfToPages(file) : this.imageToPage(file))
+      .then(r => {
+        this.setState({ [key]: { name: file.name, pages: r.pages } });
+        if (r.truncated) this.toast('Long PDF — only the first 30 pages will be read', 'blue');
+        if (r.blankPages && r.blankPages >= r.pages.length) {
+          this.setState({ importError: '⚠ ' + file.name + ' uses a scan format this browser cannot draw — the pages render blank white, so question images and crops will be empty (the text transcription still works). Fix: open the PDF on your computer, use Print → "Save as PDF" to re-save it, and upload that copy — or upload clear photos/screenshots of the pages instead.' });
+        } else if (r.blankPages) {
+          this.toast(r.blankPages + ' page(s) rendered blank — their images may be empty', 'blue');
+        }
+      })
+      .catch(err => this.setState({ [key]: null, importError: 'Could not read ' + file.name + ': ' + (err && err.message ? err.message : String(err)) }));
+  }
+
+  normChoice(v) {
+    const s = String(v == null ? '' : v).trim();
+    let m = s.match(/^[\(\[]?\s*(?:option\s*)?([0-9]{1,2}|[a-j])\s*[\)\]\.]/i);
+    if (!m) m = s.match(/^([0-9]{1,2}|[a-j])$/i);
+    if (m) {
+      let t = String(m[1]).toLowerCase();
+      if (/^[a-z]$/.test(t)) t = String(t.charCodeAt(0) - 96);
+      return t;
+    }
+    return '';
+  }
+
+  stripChoicePrefix(v) {
+    return String(v == null ? '' : v)
+      .replace(/^[\(\[]?\s*(?:option\s*)?[0-9a-j]\s*[\)\]\.]\s*/i, '')
+      .trim().toLowerCase().replace(/\s+/g, ' ');
+  }
+
+  sameChoice(a, b) {
+    const na = this.normChoice(a), nb = this.normChoice(b);
+    if (na && nb) return na === nb;
+    const ta = this.stripChoicePrefix(a), tb = this.stripChoicePrefix(b);
+    if (na && !nb) return false;
+    return !!ta && ta === tb;
+  }
+
+  labelledOption(o, j) {
+    const s = String(o == null ? '' : o).trim();
+    return /^[\(\[]?\s*[0-9a-j]\s*[\)\]\.]/i.test(s) ? s : '(' + (j + 1) + ') ' + s;
+  }
+
+  parseQNumber(raw) {
+    const s = String(raw == null ? '' : raw).replace(/[^0-9a-z]/gi, '').toLowerCase();
+    const m = s.match(/^(\d+)([a-z0-9]*)$/);
+    return m ? { num: m[1], sub: m[2] } : { num: null, sub: s };
+  }
+
+  questionLabel(q, idx) {
+    if (q.type === 'image') return '';
+    const isMcq = q.type === 'mc' || q.type === 'checkbox' || q.type === 'dropdown';
+    const p = this.parseQNumber(q.number);
+    const own = !!p.num;
+    if (isMcq) return p.num ? p.num + '.' : '';
+    if (!p.num) {
+      const qs = this.state.questions || [];
+      for (let j = idx - 1; j >= 0; j--) {
+        const pj = this.parseQNumber(qs[j] && qs[j].number);
+        if (!pj.num) continue;
+        p.num = pj.num;
+        const parent = (pj.sub.match(/^[a-z]/) || [''])[0];
+        if (parent && p.sub && /^[ivx]+$/.test(p.sub)) p.sub = parent + p.sub;
+        break;
+      }
+    }
+    const sub = /^[a-z]{1,2}[ivx]{0,3}$/.test(p.sub) ? p.sub : '';
+    if (!own && !sub) return '';
+    if (!p.num) return '';
+    return sub ? p.num + '(' + sub + ')' : p.num + '.';
+  }
+
+  numberedTitle(q, idx) {
+    const body = String(q.title || 'Question ' + (idx + 1)).trim();
+    const label = this.questionLabel(q, idx);
+    if (!label) return body;
+    const bare = label.replace(/[^0-9a-z]/gi, '').toLowerCase();
+    const head = body.slice(0, label.length + 4).replace(/[^0-9a-z]/gi, '').toLowerCase();
+    if (bare && head.indexOf(bare) === 0) return body;
+    return label + ' ' + body;
+  }
+
+  imageNameFor(q, idx) {
+    const prefix = q.type === 'short' ? 'SAQ' : (q.type === 'scale' ? 'LSQ' : (q.type === 'image' ? 'FIG' : 'MCQ'));
+    const num = q.number != null && String(q.number).trim() ? String(q.number).replace(/[^a-z0-9]/gi, '') : String(idx + 1);
+    return prefix + num;
+  }
+
+  async cropRegion(pageB64, region, pad) {
+    if (!region || typeof region.top !== 'number' || typeof region.bottom !== 'number') return null;
+    if (pad == null) pad = 4;
+    const img = await new Promise((res, rej) => {
+      const im = new Image();
+      im.onload = () => res(im);
+      im.onerror = () => rej(new Error('crop decode failed'));
+      im.src = 'data:image/jpeg;base64,' + pageB64;
+    });
+    const top = Math.max(0, (region.top - pad) / 100) * img.height;
+    const bottom = Math.min(1, (region.bottom + pad) / 100) * img.height;
+    const left = Math.max(0, (region.left || 0) / 100) * img.width;
+    const right = Math.min(1, (region.right == null ? 100 : region.right) / 100) * img.width;
+    const h = Math.round(bottom - top);
+    const w = Math.round(right - left);
+    if (h < 24 || w < 24) return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    if (region.contrast && region.contrast !== 100) ctx.filter = 'contrast(' + region.contrast + '%)';
+    ctx.drawImage(img, Math.round(left), Math.round(top), w, h, 0, 0, w, h);
+    return canvas.toDataURL('image/jpeg', 0.85);
+  }
+
+  imgBlock(b64) {
+    return { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: b64 } };
+  }
+
+  async askClaude(content, system) {
+    this._callTimes = this._callTimes || [];
+    const WINDOW = 65000, MAX = 13;
+    const now = Date.now();
+    this._callTimes = this._callTimes.filter(t => now - t < WINDOW);
+    if (this._callTimes.length >= MAX) {
+      const waitMs = WINDOW - (now - this._callTimes[0]) + 1500;
+      const prev = this.state.extractStatus;
+      this.setState({ extractStatus: 'Pausing ' + Math.ceil(waitMs / 1000) + 's to stay under the rate limit… (long document, no action needed)' });
+      await new Promise(r => setTimeout(r, waitMs));
+      this.setState({ extractStatus: prev });
+      this._callTimes = this._callTimes.filter(t => Date.now() - t < WINDOW);
+    }
+    this._callTimes.push(Date.now());
+    return await window.claude.complete({
+      model: 'claude-sonnet-4-5',
+      max_tokens: 8000,
+      system: system,
+      messages: [{ role: 'user', content: content }]
+    });
+  }
+
+  async askJson(content, system, label) {
+    this._failedSteps = this._failedSteps || [];
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        return this.parseJsonReply(await this.askClaude(content, system));
+      } catch (e) {
+        if (attempt === 0) {
+          this.setState({ extractStatus: 'Hiccup on ' + label + ' — retrying…' });
+          await new Promise(r => setTimeout(r, 3000));
+        }
+      }
+    }
+    this._failedSteps.push(label);
+    return null;
+  }
+
+  parseJsonReply(raw) {
+    const start = raw.indexOf('{');
+    const end = raw.lastIndexOf('}');
+    if (start < 0 || end <= start) throw new Error('Claude returned no structured data — try again.');
+    return JSON.parse(raw.slice(start, end + 1));
+  }
+
+  normalizeNumKey(x) {
+    if (x == null) return null;
+    let k = String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (/^q\d/.test(k)) k = k.slice(1);
+    return k || null;
+  }
+
+  matchAnswer(q, ans) {
+    if (ans == null) return q.correct;
+    const opts = q.options || [];
+    const findOpt = a => {
+      const t = String(a).trim();
+      const exact = opts.find(o => o.trim().toLowerCase() === t.toLowerCase());
+      if (exact) return exact;
+      // letter answers: "B", "(b)"
+      if (/^\(?[a-j]\)?$/i.test(t)) {
+        const idx = t.replace(/[()]/g, '').toLowerCase().charCodeAt(0) - 97;
+        if (idx >= 0 && idx < opts.length) return opts[idx];
+      }
+      // numeric answers: "(2)", "2", "option 2" — Singapore MCQ style
+      const nm = t.match(/^(?:option\s*)?\(?(\d{1,2})\)?$/i);
+      if (nm) {
+        const n = parseInt(nm[1]);
+        // prefer an option whose text starts with that number marker, e.g. "(2) ..."
+        const marked = opts.find(o => new RegExp('^\\(?' + n + '\\)?[\\.\\)\\s]').test(o.trim()));
+        if (marked) return marked;
+        if (n >= 1 && n <= opts.length) return opts[n - 1];
+      }
+      if (t.length < 4) return null;
+      const contains = opts.find(o => o.trim().toLowerCase().indexOf(t.toLowerCase()) >= 0 || t.toLowerCase().indexOf(o.trim().toLowerCase()) >= 0);
+      return contains || null;
+    };
+    if (q.type === 'short') return String(Array.isArray(ans) ? ans.join('; ') : ans);
+    if (q.type === 'checkbox') {
+      const parts = Array.isArray(ans) ? ans : String(ans).split(/[,;]\s*/);
+      const matched = parts.map(findOpt).filter(Boolean);
+      return matched.length ? matched : q.correct;
+    }
+    if (q.type === 'mc' || q.type === 'dropdown') {
+      const m = findOpt(Array.isArray(ans) ? ans[0] : ans);
+      return m || q.correct;
+    }
+    return q.correct;
+  }
+
+  // ---------- Claude extraction ----------
+  async extract() {
+    const s = this.state;
+    const qPages = (s.qFile && s.qFile.pages) || [];
+    const qText = [(s.qFile && s.qFile.isText) ? s.qFile.text : '', s.importText.trim()].filter(Boolean).join('\n\n');
+    const aPages = (s.aFile && s.aFile.pages) || [];
+    const aText = (s.aFile && s.aFile.isText) ? s.aFile.text : '';
+    if (!qPages.length && !qText) {
+      this.setState({ importError: 'Upload a worksheet file or paste some text first.' });
+      return;
+    }
+    if ((s.qFile && s.qFile.preparing) || (s.aFile && s.aFile.preparing)) {
+      this.setState({ importError: 'Still preparing a file — give it a second.' });
+      return;
+    }
+    const totalCalls = Math.max(1, qPages.length) + (aPages.length || (aText ? 1 : 0));
+    // No hard cap: the extractor paces itself under the ~15 calls/min rate limit.
+    this._callTimes = [];
+    this._failedSteps = [];
+    this.setState({ extracting: true, importError: '', extractStatus: 'Starting…' });
+    try {
+      const qSchema = 'Respond with ONLY raw JSON, no markdown fences, exactly this shape:\n{"title": "worksheet title if visible, else empty string", "description": "subject/level if visible, else empty string", "questions": [{"number": "printed question number EXACTLY as on the worksheet. MCQ: the numeral only, e.g. \\"3\\". Written/short answer: the numeral plus its sub-part letters in parentheses, e.g. \\"1(a)\\", \\"2(b)\\", \\"2(bii)\\" — every sub-part is its OWN question with its own number, matching how the answer key labels them", "title": "question text", "type": "mc|checkbox|short|dropdown|scale|image", "options": ["..."], "correct": "correct option text if marked on the page, else null", "required": true, "scaleMin": 1, "scaleMax": 5, "imageRegion": {"top": 12, "bottom": 48}}]}\nRules: transcribe text EXACTLY including units and symbols; "mc" for single-choice MCQ, "checkbox" only when multiple answers apply, "short" for open-ended; "image" for a stimulus block (figure, diagram, passage, data table) that pupils only look at and do NOT answer — give it the nearest label as its number; question numbering must match the printed worksheet EXACTLY — MCQ numbers stay plain numerals ("6"), and written-answer sub-parts keep their bracketed letters ("1(a)", "2(b)", "2(bii)") exactly as the answer key labels them — so the collected responses carry the same labels as the paper; only include questions whose text STARTS on this page; do not invent questions or answers; if unsure of a character, transcribe your best reading.\nimageRegion: if the question includes a figure, diagram, table, graph, or picture (including graphs printed inside the options), give the vertical span of the ENTIRE region containing those visuals as percentages of the full page height (0 = top of page, 100 = bottom). Be generous — include the whole figure. If the question is pure text, set imageRegion to null.';
+      const system = 'You are a precise document transcriber for a Singapore primary-school science teacher. You convert worksheets into structured form questions. You only report what you can clearly read; you never fabricate content. You respond with raw JSON only.';
+
+      let step = 0;
+      const allQs = [];
+      let title = '', desc = '';
+
+      if (qPages.length) {
+        for (let i = 0; i < qPages.length; i++) {
+          step++;
+          this.setState({ extractStatus: 'Reading worksheet page ' + (i + 1) + ' of ' + qPages.length + '… (step ' + step + '/' + totalCalls + ')' });
+          const parsed = await this.askJson([
+            { type: 'text', text: 'Worksheet page ' + (i + 1) + ' of ' + qPages.length + '. Extract the questions. ' + qSchema },
+            this.imgBlock(qPages[i])
+          ], system, 'worksheet page ' + (i + 1));
+          if (!parsed) continue;
+          if (!title && parsed.title) title = String(parsed.title);
+          if (!desc && parsed.description) desc = String(parsed.description);
+          (Array.isArray(parsed.questions) ? parsed.questions : []).forEach(q => { q._page = i; allQs.push(q); });
+        }
+      } else {
+        step++;
+        this.setState({ extractStatus: 'Structuring pasted text… (step ' + step + '/' + totalCalls + ')' });
+        const parsed = await this.askJson([{ type: 'text', text: 'Worksheet text:\n' + qText + '\n\nExtract the questions. ' + qSchema }], system, 'pasted text');
+        if (!parsed) throw new Error('Could not read the pasted text — please try again.');
+        title = String(parsed.title || ''); desc = String(parsed.description || '');
+        (Array.isArray(parsed.questions) ? parsed.questions : []).forEach(q => allQs.push(q));
+      }
+      if (!allQs.length) throw new Error('No questions were found in the document.');
+
+      // ---- answer key pass ----
+      const answers = {};
+      const aSchema = 'Respond with ONLY raw JSON, no markdown fences: {"answers": [{"number": "question number as printed, including sub-parts e.g. \\"7\\" or \\"7a\\"", "kind": "option|text", "answer": "the correct answer"}]}. Include EVERY answer on the page, from every section (e.g. Booklet A and Booklet B), keeping each question\u2019s printed number. kind is "option" when the answer selects an MCQ option (a letter like B, a number like (2), or the option text); kind is "text" for open-ended / short-answer questions — for those give the FULL model answer sentence(s) exactly as written in the mark scheme. Use an array for multi-answer questions. Only report answers you can clearly read.';
+      for (let i = 0; i < aPages.length; i++) {
+        step++;
+        this.setState({ extractStatus: 'Reading answer key page ' + (i + 1) + ' of ' + aPages.length + '… (step ' + step + '/' + totalCalls + ')' });
+        const parsed = await this.askJson([
+          { type: 'text', text: 'Answer key / mark scheme page ' + (i + 1) + ' of ' + aPages.length + '. ' + aSchema },
+          this.imgBlock(aPages[i])
+        ], system, 'answer key page ' + (i + 1));
+        if (!parsed) continue;
+        (Array.isArray(parsed.answers) ? parsed.answers : []).forEach(a => { const k = this.normalizeNumKey(a && a.number); if (k) (answers[k] = answers[k] || []).push({ answer: a.answer, kind: a.kind === 'text' ? 'text' : 'option' }); });
+      }
+      if (aText) {
+        step++;
+        this.setState({ extractStatus: 'Reading answer key text… (step ' + step + '/' + totalCalls + ')' });
+        const parsed = await this.askJson([{ type: 'text', text: 'Answer key text:\n' + aText + '\n\n' + aSchema }], system, 'answer key text');
+        if (parsed) (Array.isArray(parsed.answers) ? parsed.answers : []).forEach(a => { const k = this.normalizeNumKey(a && a.number); if (k) (answers[k] = answers[k] || []).push({ answer: a.answer, kind: a.kind === 'text' ? 'text' : 'option' }); });
+      }
+
+      this.setState({ extractStatus: 'Structuring questions…' });
+      const newQs = allQs.map(q => {
+        const type = ['mc', 'checkbox', 'short', 'dropdown', 'scale', 'image'].indexOf(q.type) >= 0 ? q.type : 'mc';
+        const built = {
+          id: this.uid(), type: type,
+          number: q.number != null ? String(q.number) : null,
+          title: String(q.title || '').trim(),
+          required: q.type === 'image' ? false : q.required !== false,
+          options: Array.isArray(q.options) ? q.options.map(o => String(o)) : [],
+          correct: q.correct == null ? null : (Array.isArray(q.correct) ? q.correct.map(String) : String(q.correct)),
+          scaleMin: parseInt(q.scaleMin) >= 0 ? parseInt(q.scaleMin) : 1,
+          scaleMax: parseInt(q.scaleMax) > 1 ? parseInt(q.scaleMax) : 5,
+          scaleMinLabel: '', scaleMaxLabel: '',
+          _page: q._page, _region: (q.imageRegion && typeof q.imageRegion === 'object') ? q.imageRegion : null
+        };
+        return built;
+      }).filter(q => q.title);
+
+      // ---- attach answers: by printed number + answer kind (MCQ vs written), falling back to position ----
+      newQs.forEach((built, i) => {
+        let key = this.normalizeNumKey(built.number);
+        if (!key || !answers[key]) {
+          const posKey = String(i + 1);
+          if (answers[posKey] && (!built.number || this.normalizeNumKey(built.number) === posKey)) key = posKey;
+        }
+        const cands = key ? answers[key] : null;
+        if (!cands || !cands.length) return;
+        const wantText = built.type === 'short';
+        const pick = cands.find(c => (c.kind === 'text') === wantText) || cands[0];
+        if (pick && pick.answer != null) built.correct = this.matchAnswer(built, pick.answer);
+      });
+      if (!newQs.length) throw new Error('No questions were found in the document.');
+
+      // ---- crop question figures out of the scanned pages ----
+      const pageOffset = this.state.srcPages.length;
+      let imgCount = 0;
+      for (let i = 0; i < newQs.length; i++) {
+        const q = newQs[i];
+        if (q._page != null && qPages[q._page]) q.srcPage = pageOffset + q._page;
+        if (q._region && q._page != null && qPages[q._page]) {
+          this.setState({ extractStatus: 'Cropping question images… (' + (imgCount + 1) + ')' });
+          try {
+            const crop = await this.cropRegion(qPages[q._page], q._region);
+            if (crop) {
+              q.image = crop;
+              q.imageName = this.imageNameFor(q, i);
+              q.crop = { top: Math.max(0, q._region.top - 4), bottom: Math.min(100, q._region.bottom + 4) };
+              imgCount++;
+            }
+          } catch (e) {}
+        }
+        delete q._page; delete q._region;
+      }
+
+      const matched = newQs.filter(q => q.correct != null && q.correct !== '').length;
+      let existing = this.state.questions;
+      if (existing.length) {
+        const have = {};
+        existing.forEach((q, i) => { const lb = this.questionLabel(q, i); if (lb) have[lb] = 1; });
+        const clash = newQs.filter((q, i) => { const lb = this.questionLabel(q, i); return lb && have[lb]; }).length;
+        if (clash) {
+          existing = window.confirm(clash + ' of the new questions have the same labels as questions already in the form (e.g. re-transcribing the same worksheet).\n\nOK = replace the existing questions with this new set.\nCancel = keep both (you will need to remove duplicates).')
+            ? [] : existing;
+        }
+      }
+      this.setState(st => ({
+        questions: existing.concat(newQs),
+        srcPages: (existing.length ? st.srcPages : []).concat(qPages),
+        formTitle: st.formTitle || title,
+        formDesc: st.formDesc || desc,
+        extracting: false, showImport: false, importText: '', qFile: null, aFile: null, mode: 'edit'
+      }));
+      const failed = this._failedSteps || [];
+      if (failed.length) {
+        this.toast('⚠ Could not read ' + failed.length + ' page(s) — see the warning', 'red');
+        this.setState({ showImport: true, importError: '⚠ Transcribed ' + newQs.length + ' questions, but these could not be read after retrying: ' + failed.join(', ') + '. Everything else was kept — re-run the transcription with just those pages, or add those questions manually.' });
+      } else {
+        this.toast('Transcribed ' + newQs.length + ' question' + (newQs.length > 1 ? 's' : '') + (matched ? ' · ' + matched + ' answers ✅' : '') + (imgCount ? ' · ' + imgCount + ' images 🖼' : '') + ' — review below ✏️', 'green');
+      }
+    } catch (err) {
+      this.setState({ extracting: false, importError: 'Extraction failed: ' + (err && err.message ? err.message : String(err)) });
+    }
+  }
+
+  // ---------- Word (.doc) export ----------
+  buildWordHtml() {
+    const esc = t => String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const typeLabel = { mc: 'Multiple choice', checkbox: 'Checkboxes (select all)', short: 'Short answer', dropdown: 'Dropdown', scale: 'Linear scale' };
+    const letter = i => String.fromCharCode(65 + i);
+    const parts = [];
+    this.state.questions.forEach((q, i) => {
+      const correctArr = q.correct == null ? [] : (Array.isArray(q.correct) ? q.correct : [q.correct]);
+      parts.push('<p class="q"><span class="qn">' + (i + 1) + '.</span> ' + esc(q.title || 'Question ' + (i + 1)) + (q.required ? ' <span class="req">*</span>' : '') + '</p>');
+      parts.push('<p class="meta">[' + typeLabel[q.type] + ']</p>');
+      if (q.image) parts.push('<p class="img"><img src="' + q.image + '" /></p>');
+      if (q.type === 'mc' || q.type === 'checkbox' || q.type === 'dropdown') {
+        (q.options || []).forEach((o, oi) => {
+          const ok = correctArr.some(c => this.sameChoice(c, this.labelledOption(o, oi)));
+          parts.push('<p class="opt' + (ok ? ' correct' : '') + '">' + (ok ? '&#10004; ' : '&#9633; ') + letter(oi) + '. ' + esc(o) + '</p>');
+        });
+      } else if (q.type === 'scale') {
+        parts.push('<p class="opt">Scale ' + q.scaleMin + ' – ' + q.scaleMax + (q.scaleMinLabel || q.scaleMaxLabel ? ' (' + esc(q.scaleMinLabel) + ' … ' + esc(q.scaleMaxLabel) + ')' : '') + '</p>');
+      } else {
+        parts.push('<p class="ans-line">_______________________________________________</p>');
+      }
+      const written = q.type === 'short' && q.correct;
+      if (written) parts.push('<p class="answer">Answer: ' + esc(Array.isArray(q.correct) ? q.correct.join('; ') : q.correct) + '</p>');
+      parts.push('<p class="sp">&nbsp;</p>');
+    });
+    return '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+      + '<head><meta charset="utf-8"><title>' + esc(this.state.formTitle || 'Worksheet') + '</title>'
+      + '<style>'
+      + 'body{font-family:Calibri,Arial,sans-serif;font-size:12pt;color:#111;line-height:1.4;}'
+      + 'h1{font-size:20pt;margin:0 0 4pt;} .desc{color:#444;margin:0 0 16pt;}'
+      + '.q{font-weight:bold;margin:0 0 2pt;} .qn{color:#1f6feb;} .req{color:#c0392b;}'
+      + '.meta{color:#888;font-size:9pt;font-style:italic;margin:0 0 6pt;}'
+      + '.opt{margin:0 0 2pt 24pt;} .opt.correct{color:#1e7d34;font-weight:bold;}'
+      + '.answer{margin:4pt 0 0 24pt;color:#1e7d34;font-weight:bold;}'
+      + '.ans-line{margin:6pt 0 0 24pt;color:#bbb;} .img{margin:6pt 0 6pt 24pt;} img{max-width:480px;}'
+      + '.sp{margin:0;font-size:6pt;}'
+      + '</style></head><body>'
+      + '<h1>' + esc(this.state.formTitle || 'Worksheet') + '</h1>'
+      + (this.state.formDesc ? '<p class="desc">' + esc(this.state.formDesc) + '</p>' : '')
+      + parts.join('\n')
+      + '</body></html>';
+  }
+
+  downloadWord() {
+    if (!this.state.questions.length) { this.toast('No questions to export', 'red'); return; }
+    const blob = new Blob(['\ufeff' + this.buildWordHtml()], { type: 'application/msword' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = this.folderName() + '.doc';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    this.toast('Word document downloaded 📄', 'green');
+  }
+
+  // ---------- Apps Script export ----------
+  buildScript() {
+    const esc = t => String(t || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n');
+    const isQuiz = this.state.questions.some(q => q.correct != null && q.correct !== '');
+    const L = [];
+    L.push('function createForm() {');
+    L.push("  var form = FormApp.create('" + esc(this.state.formTitle || 'Untitled form') + "');");
+    if (this.state.formDesc) L.push("  form.setDescription('" + esc(this.state.formDesc) + "');");
+    if (isQuiz) L.push('  form.setIsQuiz(true);');
+    L.push('');
+    this.state.questions.forEach((q, i) => {
+      const t = esc(this.numberedTitle(q, i));
+      if (q.image && q.type !== 'image') {
+        const b64 = String(q.image).split(',')[1] || '';
+        const nm = esc(q.imageName || this.imageNameFor(q, i));
+        L.push("  form.addImageItem().setTitle('" + nm + "').setImage(Utilities.newBlob(Utilities.base64Decode('" + b64 + "'), 'image/jpeg', '" + nm + ".jpg'));");
+      }
+      const opts = q.options || [];
+      const correctArr = q.correct == null ? [] : (Array.isArray(q.correct) ? q.correct : [q.correct]);
+      const hasCorrect = isQuiz && correctArr.length && (q.type === 'mc' || q.type === 'checkbox');
+      if (q.type === 'mc' || q.type === 'checkbox') {
+        const fn = q.type === 'mc' ? 'addMultipleChoiceItem' : 'addCheckboxItem';
+        L.push('  var item' + (i + 1) + ' = form.' + fn + '()');
+        L.push("    .setTitle('" + t + "')");
+        L.push('    .setRequired(' + (q.required ? 'true' : 'false') + ');');
+        if (hasCorrect) {
+          L.push('  item' + (i + 1) + '.setChoices([');
+          opts.forEach((o, j) => {
+            const lbl = this.labelledOption(o, j);
+            const ok = correctArr.some(c => this.sameChoice(c, lbl));
+            L.push("    item" + (i + 1) + ".createChoice('" + esc(lbl) + "', " + ok + ')' + (j < opts.length - 1 ? ',' : ''));
+          });
+          L.push('  ]);');
+          L.push('  item' + (i + 1) + '.setPoints(1);');
+        } else {
+          L.push('  item' + (i + 1) + ".setChoiceValues(['" + opts.map((o, j) => esc(this.labelledOption(o, j))).join("', '") + "']);");
+        }
+      } else if (q.type === 'dropdown') {
+        L.push('  form.addListItem()');
+        L.push("    .setTitle('" + t + "')");
+        L.push("    .setChoiceValues(['" + opts.map(esc).join("', '") + "'])");
+        L.push('    .setRequired(' + (q.required ? 'true' : 'false') + ');');
+      } else if (q.type === 'scale') {
+        L.push('  form.addScaleItem()');
+        L.push("    .setTitle('" + t + "')");
+        L.push('    .setBounds(' + q.scaleMin + ', ' + q.scaleMax + ')');
+        if (q.scaleMinLabel || q.scaleMaxLabel) L.push("    .setLabels('" + esc(q.scaleMinLabel) + "', '" + esc(q.scaleMaxLabel) + "')");
+        L.push('    .setRequired(' + (q.required ? 'true' : 'false') + ');');
+      } else if (q.type === 'image') {
+        if (q.image) {
+          const b64i = String(q.image).split(',')[1] || '';
+          const nmi = esc(q.imageName || this.imageNameFor(q, i));
+          L.push("  form.addImageItem().setTitle('" + t + "').setImage(Utilities.newBlob(Utilities.base64Decode('" + b64i + "'), 'image/jpeg', '" + nmi + ".jpg'));");
+        } else {
+          L.push('  // 🖼 Image-only block (no answer). Crop or upload its picture in the Form Creator and it will be embedded here automatically.');
+          L.push('  form.addSectionHeaderItem()');
+          L.push("    .setTitle('" + t + "');");
+        }
+      } else {
+        L.push('  form.addTextItem()');
+        L.push("    .setTitle('" + t + "')");
+        L.push('    .setRequired(' + (q.required ? 'true' : 'false') + ');');
+        if (isQuiz && q.correct) L.push("  // Expected answer: " + esc(String(q.correct)));
+      }
+      L.push('');
+    });
+    L.push("  Logger.log('Form URL: ' + form.getPublishedUrl());");
+    L.push("  Logger.log('Edit URL: ' + form.getEditUrl());");
+    L.push('}');
+    return L.join('\n');
+  }
+
+  renderVals() {
+    const s = this.state;
+    const hasOpts = t => t === 'mc' || t === 'checkbox' || t === 'dropdown';
+    const typeLabels = { mc: 'Multiple choice', checkbox: 'Checkboxes', short: 'Short answer', dropdown: 'Dropdown', scale: 'Linear scale', image: 'Image only' };
+
+    const editQuestions = s.questions.map((q, i) => {
+      const id = q.id;
+      const correctArr = q.correct == null ? [] : (Array.isArray(q.correct) ? q.correct : [q.correct]);
+      return {
+        num: i + 1, title: q.title, type: q.type, required: !!q.required,
+        prefix: q.type === 'short' ? 'SAQ' : (q.type === 'scale' ? 'LSQ' : (q.type === 'image' ? 'FIG' : 'MCQ')),
+        labelText: (q.type === 'short' ? 'SAQ' : (q.type === 'scale' ? 'LSQ' : (q.type === 'image' ? 'FIG' : 'MCQ'))) + ((q.number && String(q.number).trim()) ? q.number : (i + 1)),
+        pillBg: q.type === 'short' ? 'rgba(63,195,95,0.15)' : (q.type === 'scale' ? 'rgba(181,87,230,0.16)' : (q.type === 'image' ? 'rgba(102,204,255,0.14)' : 'rgba(74,144,226,0.18)')),
+        pillColor: q.type === 'short' ? 'var(--sc-green-bright)' : (q.type === 'scale' ? '#d9a6f2' : (q.type === 'image' ? 'var(--sc-cyan)' : 'var(--sc-blue-bright)')),
+        pillLine: q.type === 'short' ? 'rgba(63,195,95,0.4)' : (q.type === 'scale' ? 'rgba(181,87,230,0.45)' : (q.type === 'image' ? 'rgba(102,204,255,0.4)' : 'rgba(74,144,226,0.4)')),
+        pillGlow: s.openQ === id ? '0 0 10px rgba(102,204,255,0.5)' : 'none',
+        cardLine: s.openQ === id ? 'rgba(102,204,255,0.5)' : 'var(--sc-glass-line)',
+        cardShadow: s.openQ === id ? '0 0 18px rgba(102,204,255,0.16), 0 8px 22px rgba(0,0,0,0.3)' : '0 6px 18px rgba(0,0,0,0.24)',
+        isOpen: s.openQ === id,
+        toggleOpen: () => this.setState(st => ({ openQ: st.openQ === id ? null : id })),
+        titlePreview: q.title || 'Untitled question',
+        typeLabel: typeLabels[q.type],
+        chevron: s.openQ === id ? '▴' : '▾',
+        number: q.number || '',
+        setNumber: e => {
+          const nv = e.target.value;
+          this.setState(st => ({ questions: st.questions.map(x => x.id === id ? Object.assign({}, x, { number: nv, imageName: x.image ? this.imageNameFor(Object.assign({}, x, { number: nv }), i) : x.imageName }) : x) }));
+        },
+        hasImage: !!q.image,
+        imageEl: q.image ? React.createElement('img', { src: q.image, alt: 'Question figure', style: { maxWidth: '100%', maxHeight: '100%', display: 'block' } }) : null,
+        imageName: (q.imageName || '') + '.jpg',
+        removeImage: () => this.updateQ(id, { image: null, imageName: null, customSrc: null }),
+        noImage: !q.image,
+        uploadImage: e => this.uploadQuestionImage(e, id),
+        canCropFromPage: !q.image && q.srcPage != null && !!s.srcPages[q.srcPage],
+        canAdjust: !!q.customSrc || !!q.image || (q.srcPage != null && !!s.srcPages[q.srcPage]),
+        adjustCrop: () => this.openCropEditor(q),
+        hasOptions: hasOpts(q.type), isScale: q.type === 'scale',
+        isShortWithAnswer: q.type === 'short',
+        correctText: typeof q.correct === 'string' ? q.correct : '',
+        setCorrectText: e => this.updateQ(id, { correct: e.target.value || null }),
+        optGlyphRadius: q.type === 'checkbox' ? '4px' : '999px',
+        isFirst: i === 0, isLast: i === s.questions.length - 1,
+        scaleMin: q.scaleMin, scaleMax: q.scaleMax,
+        scaleMinLabel: q.scaleMinLabel, scaleMaxLabel: q.scaleMaxLabel,
+        setTitle: e => this.updateQ(id, { title: e.target.value }),
+        setType: e => this.updateQ(id, { type: e.target.value }),
+        setScaleMin: e => this.updateQ(id, { scaleMin: parseInt(e.target.value) }),
+        setScaleMax: e => this.updateQ(id, { scaleMax: parseInt(e.target.value) }),
+        setScaleMinLabel: e => this.updateQ(id, { scaleMinLabel: e.target.value }),
+        setScaleMaxLabel: e => this.updateQ(id, { scaleMaxLabel: e.target.value }),
+        toggleRequired: () => this.updateQ(id, { required: !q.required }),
+        addOption: () => this.updateQ(id, { options: q.options.concat(['Option ' + (q.options.length + 1)]) }),
+        optionRows: q.options.map((opt, oi) => {
+          const isCorrect = correctArr.some(c => this.sameChoice(c, this.labelledOption(opt, oi)));
+          return {
+            text: opt,
+            glyphLine: isCorrect ? 'var(--sc-green-bright)' : 'var(--sc-text-faint)',
+            glyphFill: isCorrect ? 'var(--sc-green)' : 'transparent',
+            glyphGlow: isCorrect ? '0 0 10px rgba(63,195,95,0.6)' : 'none',
+            toggleCorrect: () => {
+              if (q.type === 'checkbox') {
+                const cur = correctArr.slice();
+                const ix = cur.indexOf(opt);
+                if (ix >= 0) cur.splice(ix, 1); else cur.push(opt);
+                this.updateQ(id, { correct: cur.length ? cur : null });
+              } else {
+                this.updateQ(id, { correct: isCorrect ? null : opt });
+              }
+            },
+            setText: e => {
+              const nv = e.target.value;
+              const newOpts = q.options.map((o, j) => j === oi ? nv : o);
+              let nc = q.correct;
+              if (Array.isArray(nc)) nc = nc.map(c => c === opt ? nv : c);
+              else if (nc === opt) nc = nv;
+              this.updateQ(id, { options: newOpts, correct: nc });
+            },
+            remove: () => this.updateQ(id, { options: q.options.filter((o, j) => j !== oi) })
+          };
+        }),
+        remove: () => this.setState(st => ({ questions: st.questions.filter(x => x.id !== id) })),
+        duplicate: () => this.setState(st => {
+          const idx = st.questions.findIndex(x => x.id === id);
+          const copy = Object.assign({}, st.questions[idx], { id: this.uid(), options: st.questions[idx].options.slice() });
+          const arr = st.questions.slice(); arr.splice(idx + 1, 0, copy);
+          return { questions: arr };
+        }),
+        moveUp: () => this.setState(st => {
+          const idx = st.questions.findIndex(x => x.id === id);
+          if (idx <= 0) return null;
+          const arr = st.questions.slice(); const t2 = arr[idx - 1]; arr[idx - 1] = arr[idx]; arr[idx] = t2;
+          return { questions: arr };
+        }),
+        moveDown: () => this.setState(st => {
+          const idx = st.questions.findIndex(x => x.id === id);
+          if (idx < 0 || idx >= st.questions.length - 1) return null;
+          const arr = st.questions.slice(); const t2 = arr[idx + 1]; arr[idx + 1] = arr[idx]; arr[idx] = t2;
+          return { questions: arr };
+        })
+      };
+    });
+
+    const fillQuestions = s.questions.map((q, i) => {
+      const id = q.id;
+      const ans = s.fillAnswers[id];
+      const isChoice = q.type === 'mc' || q.type === 'checkbox';
+      const missing = this._invalid && q.type !== 'image' && q.required && (ans == null || ans === '' || (Array.isArray(ans) && !ans.length));
+      const setAns = v => this.setState(st => ({ fillAnswers: Object.assign({}, st.fillAnswers, { [id]: v }) }));
+      const scaleRows = [];
+      if (q.type === 'scale') {
+        for (let n = q.scaleMin; n <= q.scaleMax; n++) {
+          const picked = ans === n;
+          scaleRows.push({
+            n: n, pick: () => setAns(n),
+            line: picked ? 'var(--sc-blue-bright)' : 'var(--sc-line)',
+            bg: picked ? 'var(--sc-blue-deep)' : 'transparent',
+            color: picked ? '#fff' : 'var(--sc-text-muted)',
+            glow: picked ? '0 0 14px rgba(74,144,226,0.55)' : 'none'
+          });
+        }
+      }
+      return {
+        title: (q.title || 'Question ' + (i + 1)),
+        star: q.required ? ' *' : '',
+        hasImage: !!q.image,
+        imageEl: q.image ? React.createElement('img', { src: q.image, alt: 'Question figure', style: { maxWidth: '100%', maxHeight: '100%', display: 'block' } }) : null,
+        borderColor: missing ? 'var(--sc-red)' : 'var(--sc-glass-line)',
+        isChoice: isChoice, isShort: q.type === 'short', isDropdown: q.type === 'dropdown', isScale: q.type === 'scale',
+        optGlyphRadius: q.type === 'checkbox' ? '4px' : '999px',
+        answerText: typeof ans === 'string' ? ans : '',
+        setText: e => setAns(e.target.value),
+        scaleMinLabel: q.scaleMinLabel || String(q.scaleMin), scaleMaxLabel: q.scaleMaxLabel || String(q.scaleMax),
+        scaleRows: scaleRows,
+        plainOptions: (q.options || []).map(o => ({ text: o })),
+        optionRows: (q.options || []).map(o => {
+          const picked = q.type === 'checkbox' ? (Array.isArray(ans) && ans.indexOf(o) >= 0) : ans === o;
+          return {
+            text: o,
+            pick: () => {
+              if (q.type === 'checkbox') {
+                const cur = Array.isArray(ans) ? ans.slice() : [];
+                const ix = cur.indexOf(o);
+                if (ix >= 0) cur.splice(ix, 1); else cur.push(o);
+                setAns(cur);
+              } else setAns(o);
+            },
+            bg: picked ? 'rgba(63,195,95,0.12)' : 'var(--sc-input-bg)',
+            line: picked ? 'var(--sc-green)' : 'var(--sc-input-line)',
+            glyphLine: picked ? 'var(--sc-green-bright)' : 'var(--sc-text-faint)',
+            glyphFill: picked ? 'var(--sc-green)' : 'transparent',
+            glyphGlow: picked ? '0 0 10px rgba(63,195,95,0.6)' : 'none'
+          };
+        })
+      };
+    });
+
+    const resultCards = s.responses.length ? s.questions.map((q, i) => {
+      const vals = s.responses.map(r => r.answers[q.id]).filter(v => v != null && v !== '' && !(Array.isArray(v) && !v.length));
+      const card = { title: 'Q' + (i + 1) + '. ' + (q.title || 'Question ' + (i + 1)), typeLabel: typeLabels[q.type], answered: vals.length, isBars: false, isText: false, bars: [], texts: [] };
+      if (q.type === 'short') {
+        card.isText = true;
+        card.texts = vals.slice(-12).map(v => ({ text: String(v) }));
+      } else {
+        card.isBars = true;
+        let labels;
+        if (q.type === 'scale') { labels = []; for (let n = q.scaleMin; n <= q.scaleMax; n++) labels.push(String(n)); }
+        else labels = q.options || [];
+        const counts = {};
+        vals.forEach(v => (Array.isArray(v) ? v : [v]).forEach(x => { counts[String(x)] = (counts[String(x)] || 0) + 1; }));
+        const maxC = Math.max(1, ...Object.values(counts));
+        card.bars = labels.map(l => ({ label: l, count: counts[l] || 0, pct: Math.round(((counts[l] || 0) / maxC) * 100) }));
+      }
+      return card;
+    }) : [];
+
+    const seenLbl = {}, dupes = [];
+    s.questions.forEach((q, i) => {
+      const lb = this.questionLabel(q, i);
+      if (!lb) return;
+      if (seenLbl[lb]) { if (dupes.indexOf(lb) < 0) dupes.push(lb); }
+      else seenLbl[lb] = 1;
+    });
+
+    const toast = s.toast;
+    const toastColors = { green: ['var(--sc-green)', 'rgba(63,195,95,0.4)'], red: ['var(--sc-red)', 'rgba(232,73,63,0.4)'], blue: ['var(--sc-blue)', 'rgba(74,144,226,0.4)'] };
+    const tc = toast ? (toastColors[toast.color] || toastColors.green) : toastColors.green;
+    const isQuiz = s.questions.some(q => q.correct != null && q.correct !== '');
+
+    return {
+      mode: s.mode,
+      modeOptions: [{ value: 'edit', label: '✏️ Edit' }, { value: 'fill', label: '📝 Fill' }, { value: 'responses', label: '📊 Responses' }],
+      setMode: m => { this._invalid = false; this.setState({ mode: m, submitted: false }); },
+      isEdit: s.mode === 'edit', isFill: s.mode === 'fill', isResponses: s.mode === 'responses',
+
+      formTitle: s.formTitle, formDesc: s.formDesc,
+      formTitleShown: s.formTitle || 'Untitled form',
+      hasDesc: !!s.formDesc,
+      setFormTitle: e => this.setState({ formTitle: e.target.value }),
+      setFormDesc: e => this.setState({ formDesc: e.target.value }),
+
+      rootClass: s.theme === 'light' ? 'fc-light' : '',
+      themeIcon: s.theme === 'light' ? '🌙' : '☀️',
+      toggleTheme: () => {
+        const next = this.state.theme === 'light' ? 'dark' : 'light';
+        try { localStorage.setItem('sc-form-creator-theme', next); } catch (e) {}
+        this.setState({ theme: next });
+      },
+      noQuestions: s.questions.length === 0,
+      hasQuestions: s.questions.length > 0,
+      questionCount: s.questions.length,
+      dupLabels: dupes.join(', '),
+      dupCount: dupes.length,
+      hasDupes: dupes.length > 0,
+      dupWarning: dupes.length
+        ? '⚠ ' + dupes.length + ' question label' + (dupes.length > 1 ? 's are' : ' is') + ' used twice (' + dupes.join(', ') + '). The Google Form would get duplicate columns and the Feedback Generator cannot match them — remove the extras before exporting.'
+        : '',
+      removeDuplicates: () => {
+        const seen = {};
+        const kept = this.state.questions.filter((q, i) => {
+          const lb = this.questionLabel(q, i);
+          if (!lb) return true;
+          if (seen[lb]) return false;
+          seen[lb] = 1;
+          return true;
+        });
+        const removed = this.state.questions.length - kept.length;
+        if (!removed) { this.toast('No duplicate labels found', 'blue'); return; }
+        if (!window.confirm('Remove ' + removed + ' duplicate question' + (removed > 1 ? 's' : '') + '? The first of each label is kept.')) return;
+        this.setState({ questions: kept });
+        this.toast('Removed ' + removed + ' duplicate question' + (removed > 1 ? 's' : ''), 'green');
+      },
+      statLine: (() => {
+        const c = { mcq: 0, saq: 0, other: 0, img: 0 };
+        s.questions.forEach(q => {
+          if (q.type === 'short') c.saq++; else if (q.type === 'mc' || q.type === 'checkbox' || q.type === 'dropdown') c.mcq++; else c.other++;
+          if (q.image) c.img++;
+        });
+        const parts = [];
+        if (c.mcq) parts.push(c.mcq + ' MCQ');
+        if (c.saq) parts.push(c.saq + ' SAQ');
+        if (c.other) parts.push(c.other + ' other');
+        parts.push(c.img + ' with images');
+        return parts.join(' · ');
+      })(),
+      anyImages: s.questions.some(q => q.image),
+      imagesFolderName: this.folderName(),
+      downloadImages: () => this.downloadImagesZip(),
+      downloadWord: () => this.downloadWord(),
+      editQuestions: editQuestions,
+      addQuestion: () => { const nq = this.blankQuestion('mc'); this.setState(st => ({ questions: st.questions.concat([nq]), openQ: nq.id })); },
+      clearAllQuestions: () => { if (window.confirm('Remove all ' + s.questions.length + ' questions? Responses are kept.')) this.setState({ questions: [] }); },
+
+      fillQuestions: fillQuestions,
+      submitted: s.submitted,
+      showFillForm: !s.submitted,
+      resetFill: () => { this._invalid = false; this.setState({ submitted: false, fillAnswers: {} }); },
+      clearFill: () => { this._invalid = false; this.setState({ fillAnswers: {} }); },
+      submitFill: () => {
+        const missing = s.questions.filter(q => {
+          const a = s.fillAnswers[q.id];
+          return q.type !== 'image' && q.required && (a == null || a === '' || (Array.isArray(a) && !a.length));
+        });
+        if (missing.length) {
+          this._invalid = true;
+          this.forceUpdate();
+          this.toast('Please answer ' + missing.length + ' required question' + (missing.length > 1 ? 's' : ''), 'red');
+          return;
+        }
+        this._invalid = false;
+        this.setState(st => ({ responses: st.responses.concat([{ ts: Date.now(), answers: st.fillAnswers }]), submitted: true, fillAnswers: {} }));
+        this.toast('Response recorded! 🎉', 'green');
+      },
+
+      responseCount: s.responses.length,
+      hasResponses: s.responses.length > 0,
+      noResponses: s.responses.length === 0,
+      resultCards: resultCards,
+      clearResponses: () => this.setState({ responses: [] }),
+
+      showImport: s.showImport,
+      openImport: () => this.setState({ showImport: true, importError: '' }),
+      closeImport: () => { if (!s.extracting) this.setState({ showImport: false }); },
+      notExtracting: !s.extracting,
+      isExtracting: s.extracting,
+      extractStatus: s.extractStatus,
+      importText: s.importText,
+      setImportText: e => this.setState({ importText: e.target.value }),
+      importError: s.importError,
+      hasImportError: !!s.importError,
+      pickQuestionsFile: e => this.readPicked(e, 'qFile'),
+      pickAnswersFile: e => this.readPicked(e, 'aFile'),
+      qFileLabel: s.qFile ? (s.qFile.preparing ? '⏳ Preparing ' + s.qFile.name + '…' : '📎 ' + s.qFile.name + (s.qFile.pages ? ' · ' + s.qFile.pages.length + ' page' + (s.qFile.pages.length > 1 ? 's' : '') : '')) : 'Upload worksheet',
+      qFileLine: s.qFile ? 'var(--sc-yellow)' : 'var(--sc-line-strong)',
+      qFileColor: s.qFile ? 'var(--sc-yellow)' : 'var(--sc-text-soft)',
+      aFileLabel: s.aFile ? (s.aFile.preparing ? '⏳ Preparing ' + s.aFile.name + '…' : '📎 ' + s.aFile.name + (s.aFile.pages ? ' · ' + s.aFile.pages.length + ' page' + (s.aFile.pages.length > 1 ? 's' : '') : '')) : 'Upload answer key',
+      aFileLine: s.aFile ? 'var(--sc-green)' : 'var(--sc-line-strong)',
+      aFileColor: s.aFile ? 'var(--sc-green-bright)' : 'var(--sc-text-soft)',
+      runExtraction: () => this.extract(),
+      stopProp: e => e.stopPropagation(),
+
+      showExport: s.showExport,
+      openExport: () => this.setState({ showExport: true }),
+      closeExport: () => this.setState({ showExport: false }),
+      scriptText: s.showExport ? this.buildScript() : '',
+      quizNote: isQuiz ? ' — set up as a quiz with answer scoring' : '',
+      copyScript: () => {
+        navigator.clipboard.writeText(this.buildScript()).then(
+          () => this.toast('Script copied! Paste it at script.google.com', 'green'),
+          () => this.toast('Copy failed — select the text manually', 'red')
+        );
+      },
+      downloadScript: () => {
+        const blob = new Blob([this.buildScript()], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = (s.formTitle || 'form').replace(/[^a-z0-9 _-]/gi, '').trim().replace(/\s+/g, '-') + '.gs';
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      },
+
+      showCrop: !!s.cropEdit,
+      cropTop: s.cropEdit ? s.cropEdit.top : 0,
+      cropBottom: s.cropEdit ? s.cropEdit.bottom : 100,
+      cropBottomMask: s.cropEdit ? Math.max(0, 100 - s.cropEdit.bottom) : 0,
+      cropAspect: s.cropEdit ? s.cropEdit.aspect : '3 / 4',
+      cropPageImg: (s.cropEdit && (s.cropEdit.custom || s.srcPages[s.cropEdit.pageIdx])) ? React.createElement('img', { src: 'data:image/jpeg;base64,' + (s.cropEdit.custom || s.srcPages[s.cropEdit.pageIdx]), alt: 'Scanned page', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block', filter: 'contrast(' + ((s.cropEdit.contrast || 100)) + '%)' } }) : null,
+      rotateLeft: () => this.rotateCropSource(-1),
+      rotateRight: () => this.rotateCropSource(1),
+      cropSrcBlank: !!(s.cropEdit && s.cropEdit.srcBlank),
+      cropUploadPhoto: e => { const qid = s.cropEdit && s.cropEdit.qid; if (qid) this.uploadQuestionImage(e, qid); },
+      setCropTop: e => this.setState(st => ({ cropEdit: Object.assign({}, st.cropEdit, { top: Math.min(parseFloat(e.target.value), st.cropEdit.bottom - 2) }) })),
+      setCropBottom: e => this.setState(st => ({ cropEdit: Object.assign({}, st.cropEdit, { bottom: Math.max(parseFloat(e.target.value), st.cropEdit.top + 2) }) })),
+      setCropLeft: e => this.setState(st => ({ cropEdit: Object.assign({}, st.cropEdit, { left: Math.min(parseFloat(e.target.value), (st.cropEdit.right == null ? 100 : st.cropEdit.right) - 2) }) })),
+      setCropRight: e => this.setState(st => ({ cropEdit: Object.assign({}, st.cropEdit, { right: Math.max(parseFloat(e.target.value), (st.cropEdit.left || 0) + 2) }) })),
+      setCropContrast: e => this.setState(st => ({ cropEdit: Object.assign({}, st.cropEdit, { contrast: parseFloat(e.target.value) }) })),
+      cropLeft: s.cropEdit ? (s.cropEdit.left || 0) : 0,
+      cropRight: s.cropEdit ? (s.cropEdit.right == null ? 100 : s.cropEdit.right) : 100,
+      cropRightMask: s.cropEdit ? Math.max(0, 100 - (s.cropEdit.right == null ? 100 : s.cropEdit.right)) : 0,
+      cropContrast: s.cropEdit ? (s.cropEdit.contrast || 100) : 100,
+      applyCrop: () => this.applyCrop(),
+      cancelCrop: () => this.setState({ cropEdit: null }),
+
+      eyeTimer: '👀 ' + this.fmtEye(s.eyeElapsed),
+      eyeWarm: s.eyeElapsed >= 35 * 60000,
+      eyeColor: s.eyeElapsed >= 35 * 60000 ? 'var(--sc-yellow)' : 'var(--sc-text-muted)',
+      eyeLine: s.eyeElapsed >= 35 * 60000 ? 'rgba(255,182,39,0.5)' : 'var(--sc-glass-line)',
+      showEyeRest: s.showEyeRest,
+      restEyesDone: () => this.setState({ showEyeRest: false, eyeStart: Date.now(), eyeElapsed: 0 }),
+
+      hasToast: !!toast,
+      toastMsg: toast ? toast.msg : '',
+      toastLine: tc[0],
+      toastGlow: tc[1]
+    };
+  }
+}
+</script>
+</body>
+</html>
