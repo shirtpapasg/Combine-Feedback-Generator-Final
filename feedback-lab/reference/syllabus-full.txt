@@ -1,0 +1,2750 @@
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SCIENCE
+TEACHING & LEARNING SYLLABUS
+Primary Three to Six
+Standard / Foundation
+Implementation starting with
+2023 Primary Three Cohort
+Updated May 2024
+©2022 Curriculum Planning and Development Division.
+This publication is not for sale. Permission is granted to reproduce
+this publication in its entirely for personal or non-commercial
+educational use only. All other rights reserved.
+
+-- 1 of 87 --
+
+1
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+PREAMBLE
+This Primary Science Syllabus is a foundation for scientific studies at higher levels.
+The syllabus has also taken into consideration the desired outcomes of education for
+our primary students as well as the national education emphasis.
+This syllabus is based on the revised Science Curriculum Framework which
+encapsulates the thrust of Science education in Singapore to provide students with a
+strong foundation in Science for life, learning, citizenry, and work. The vision of
+Science Education in Singapore represented by the three “IN”s—Inspire, Inquire and
+Innovate, can be achieved through developing in students a strong grounding in
+scientific knowledge, practices and values.
+The aims spelt out in the syllabus provide the guiding principles for the suggested
+teaching approaches and evaluation methods. Teachers are advised not to follow the
+syllabus too rigidly but to exercise their professional judgement in implementing it.
+Schemes of work should be developed with the interests and abilities of the students
+uppermost in mind. Teachers are encouraged to use a variety of approaches in their
+teaching and incorporate ideas and materials from various sources in order to enhance
+the learning of Science.
+
+-- 2 of 87 --
+
+2
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+CONTENTS
+Page
+1. INTRODUCTION 3
+1.1 Science Curriculum Framework 4
+1.2 21st Century Competencies 8
+2. CONTENT 11
+2.1 Aims of Primary Science Syllabus 12
+2.2 Syllabus Framework 12
+3. PEDAGOGY 22
+3.1 Teaching and Learning of Primary Science 23
+3.1.1 Students as Inquirers 23
+3.1.2 Teachers as Facilitators
+- Singapore Teaching Practice
+- e-Pedagogy
+25
+4. ASSESSMENT 32
+4.1 Assessment and Feedback 33
+4.2 Guidelines for Assessment 35
+5. SYLLABUS LEARNING OUTCOMES 36
+6. GLOSSARY OF TERMS 81
+7. ACKNOWLEDGEMENT 84
+
+-- 3 of 87 --
+
+3
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 1:
+INTRODUCTION
+Science Curriculum Framework
+21st Century Competencies
+
+-- 4 of 87 --
+
+4
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+1. INTRODUCTION
+1.1 Science Curriculum Framework
+The revised Science Curriculum Framework (see Figure 1) encapsulates the thrust of
+Science education in Singapore to provide students with a strong foundation in
+Science for life, learning, citizenry, and work.
+Science for Life and Society in the centre circle captures the essence of the goals
+of Science education.
+Figure 1: The Science Curriculum Framework
+Our students are diverse, with different needs, interests, and aptitudes for Science.
+Given the diversity of our students and the needs of our country, the twin goals of
+Science education are to:
+• Enthuse and nurture all students to be scientifically literate, so that they are able
+to make informed decisions and take responsible actions in their daily lives; and
+• Provide strong Science fundamentals for students to innovate and pursue STEM
+for future learning and work. Surrounding the centre circle are the three “IN”s —
+
+-- 5 of 87 --
+
+5
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Inspire, Inquire and Innovate—which represents the vision for Science Education
+and encapsulates the overall experience of our students in Science education:
+(a) INspired by Science. Students enjoy learning Science and are fascinated by
+how everyday phenomena have scientific connections and how Science helps
+solve many of our global challenges. They regard Science as relevant and
+meaningful, appreciating how Science and Technology have transformed the
+world, and improved our lives. Students are open to the possibility of pursuing
+Science-related careers as a viable profession to serve the good of society.
+(b) INquire like Scientists. Students have strong fundamentals in Science and
+possess the spirit of scientific inquiry. They are able to engage confidently in
+the Practices of Science, grounded in the knowledge, issues and questions that
+relate to the roles played by Science in daily life, society and the environment.
+They can discern, weigh alternatives, and evaluate claims and ideas critically,
+based on logical scientific evidence and arguments, and yet be able to suspend
+judgement where there is lack of evidence.
+(c) INnovate using Science. Students apply Science to generate creative solutions
+to solve real-world problems, ranging from those affecting everyday lives to
+complex problems affecting humanity. It is envisaged that there will be a strong
+pipeline of students who can contribute towards STEM research, innovation,
+and enterprise.
+The outer ring represents the domains that make up the strong science fundamentals:
+Core Ideas of Science, Practices of Science and the Values, Ethics & Attitudes in
+Science.
+• Core Ideas of Science. The Core Ideas are the distilled ideas central to Science.
+The Core Ideas help students see the coherence and conceptual links within and
+across the different sub-disciplines of Science (i.e., Biology, Chemistry, and
+Physics). The Core Ideas also provide a framework to make visible students’
+progression in Science understanding across the different levels of education.
+• Practices of Science. The Practices consist of three components:
+(a) Demonstrating Ways of Thinking and Doing in Science (WOTD);
+(b) Understanding the Nature of Scientific Knowledge (NOS); and
+
+-- 6 of 87 --
+
+6
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+(c) Relating Science, Technology, Society and Environment (STSE).
+They represent the set of established procedures and processes associated with
+scientific inquiry, what scientific knowledge is and how it is generated and
+established, and how Science is applied in society respectively. The Practices
+serve to highlight that the discipline of Science is more than the acquisition of a
+body of knowledge (e.g., scientific facts, concepts, laws, and theories); it is also a
+way of thinking and doing. It is important to appreciate that the three components
+representing the cognitive, epistemic, and social aspects of the Practices are
+intricately related (see Figure 2).
+• Values, Ethics and Attitudes in Science. Although Science uses objective methods
+to arrive at evidence-based conclusions, it is in fact a human enterprise conducted
+in particular social contexts which involves consideration of values and ethics. The
+intent of fostering an awareness and appreciation of values in the curriculum is to
+sensitise our students to the ethical implications of the application of Science in
+society. Thus, Science education needs to equip students with the ability to
+articulate their ethical stance as they participate in discussions about socio-
+scientific issues that involve ethical dilemmas, with no single right answer.
+The pair of hands represents the roles of students as inquirers , supported by teachers
+and partners as facilitators of the students’ learning experiences. The partnership of
+learning and teaching goes beyond the students and teachers to include other partners
+who can facilitate learning in various contexts to help students appreciate the
+application of Science in their daily lives, society, and the environment.
+
+-- 7 of 87 --
+
+7
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Demonstrating WOTD
+Investigating Evaluating and
+Reasoning
+Developing and
+Evaluating
+Solutions
+Posing questions
+and defining
+problems
+Communicating,
+evaluating and
+defending ideas with
+evidence
+Using and
+developing models
+Designing
+investigations
+Making informed
+decisions and taking
+responsible actions
+Constructing
+explanations and
+designing solutions
+Conducting
+experiments and
+testing solutions
+Analysing and
+interpreting data
+Understanding NOS
+Science is an evidence-based, model-building enterprise to
+understand the real world.
+Science assumes natural causes, order and consistency in natural
+systems.
+Scientific knowledge is generated through established procedures
+and critical debate.
+Scientific knowledge is reliable, durable, open to change in light of
+new evidence.
+Relating STSE
+There are risks and benefits associated with the applications of Science in society.
+Applications of Science often have ethical, social, economic and environmental implications.
+Application of new scientific discoveries often drive technological advancement while
+advances in technology enable scientists to make new or deeper inquiry.
+Figure 2: The Practices of Science
+Practices
+of Science
+Relating
+Science-Technology-Society-Environment
+
+-- 8 of 87 --
+
+8
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+1.2 21st Century Competencies
+To prepare our students for the future, a Framework for 21st Century Competencies
+(21CC) and Student Outcomes was developed by MOE (see Figure 3). This 21CC
+framework guides the purposive development, through the total curriculum, of key
+competencies and mindsets for students to thrive and contribute in the 21st century.
+Refer to the 21CC OPAL2.0 Site for more information.
+Figure 3: Framework for 21st Century Competencies and Student Outcomes
+In Singapore, science education plays a crucial role in equipping our students to
+understand and tackle the myriad of local and global challenges of the 21st century.
+These challenges include issues such as climate change, technological disruptions
+(e.g. artificial intelligence), and the sustainable management of resources to support
+urban development and economic growth. To effectively address these challenges, it
+is vital to cultivate scientifically literate citizens who:
+• Possess the mindset and practical knowledge of science and its applications to
+make informed decisions and take responsible actions in their daily lives.
+• Appreciate science as part of humanity’s intellectual and cultural heritage,
+recognising the beauty and power of its ideas, and engaging in socio-scientific
+issues ethically and in an informed manner.
+• Can apply scientific knowledge and skills, as well as embrace scientific attitudes
+and mindsets to innovate and explore new frontiers.
+
+-- 9 of 87 --
+
+9
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Engaging our students in the Practices of Science (POS) is aligned with the larger goal
+of developing 21CC in our students. The emerging 21CC (E21CC) that can be most
+naturally developed through primary science are Critical Thinking and
+Communication, while the development of the other E21CCs depends on the
+contexts of lessons. Intentional development of E21CC through science makes
+learning meaningful and facilitates the transfer of learning.
+Next, we illustrate how Critical Thinking and Communication can be developed
+through the Primary Science Curriculum.
+Critical Thinking
+Critical Thinking refers to the ability to exercise sound reasoning and metacognitive
+thinking to interpret and analyse information and evidence, draw conclusions, make
+decisions, and solve problems.
+Developmental
+Milestones
+Examples of how it could look like in a primary
+science classroom
+• Use evidence to
+explain reasoning
+and decisions.
+• Reflect on thoughts,
+attitudes, behaviour
+and actions during
+learning
+experiences, and
+determine the
+modifications
+required.
+Students could be given opportunities to:
+• analyse observations and data to infer patterns and
+relationships or explain findings.
+• seek clarification to deepen understanding of science
+concepts and assess reasonableness, accuracy and
+quality of information and ideas.
+• state or select options based on appropriate criteria
+with reasons considering consequences and values.
+Example:
+In the topic of Energy Forms and Uses (Light), students
+explore variables affecting sizes of shadows. Through
+hands-on investigations using the SPARKLE Kit,
+students record their observations on how the light
+source-object and object-screen distances affect the
+sizes of shadows. They analyse the data collected and
+draw conclusions about variables affecting the sizes of
+shadows based on the evidence collected and classroom
+discussions. From the investigations, they reflect on the
+factors affecting sizes of shadows and draw connections
+to the concept of light travelling in straight lines.
+
+-- 10 of 87 --
+
+10
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Communication
+Effective communication refers to the ability to convey information and exchange ideas
+clearly and coherently through multimodal ways for specific purposes, audiences and
+contexts.
+Developmental
+Milestones
+Examples of how it could look like in a primary
+science classroom
+• Convey and assess
+information and
+ideas for relevance,
+while considering the
+specific purpose and
+context of
+communication.
+• Respond with
+respect and
+empathy, appreciate
+different
+perspectives during
+interactions.
+Students could be given opportunities to:
+• communicate findings and information through various
+forms (e.g., written, verbal, pictorial, tabular or
+graphical) using clear explanation and reasoning.
+• seek feedback and/or acceptance of explanations or
+solutions within the class or wider community.
+Example:
+In the topic of Human System (Digestive System),
+students apply what they have learnt on the digestive
+system and use different representations (e.g., written,
+verbal, pictorial, physical model) to create models of the
+digestive system. Students make use of the models to
+communicate the functions of the different parts of the
+digestive system. They provide respectful feedback to
+help one another improve how they explain and represent
+the parts and functions of the system.
+
+-- 11 of 87 --
+
+11
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 2:
+CONTENT
+Aims of Primary Science Syllabus
+Syllabus Framework
+
+-- 12 of 87 --
+
+12
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+2. CONTENT
+2.1 Aims of Primary Science Syllabus
+The Primary Science Syllabus aims to provide students with experiences/
+opportunities to:
+• Build on their interest and stimulate their curiosity about themselves and their
+environment.
+• Acquire basic scientific concepts to help them understand themselves and the
+world around them.
+• Develop skills, dispositions, and attitudes for scientific inquiry.
+• Apply scientific concepts and skills in making responsible decisions.
+• Appreciate how Science influences people and the environment.
+2.2 Syllabus Framework
+The Primary Science Syllabus comprises the Core Ideas, Practices and Values, Ethics
+and Attitudes.
+Core Ideas
+The Core Ideas in this syllabus are organised as themes, which students can relate to
+in their everyday experiences, and to the commonly observed phenomena in nature.
+The aim is to enable students to appreciate the links between different themes/topics
+and thus allow the integration of scientific ideas. The five themes chosen are:
+Diversity, Cycles, Systems, Energy, and Interactions. These themes encompass
+a core body of concepts in both the life and physical Sciences. This body of concepts
+has been chosen because it provides a broad-based understanding of the
+environment, and it will help build a foundation upon which students can rely on for
+further study.
+Although the content of the syllabus is organised into five themes, the topics under
+each theme are not to be viewed as compartmentalised blocks of knowledge. In
+general, there are no clear boundaries between these themes. There may be topics
+common to different themes. Hence, a conscious effort is needed to demonstrate the
+
+-- 13 of 87 --
+
+13
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+relationship between themes whenever possible. To help teachers and students
+appreciate and understand the themes, essential takeaways and key inquiry questions
+are included for each theme. These essential takeaways and questions can guide
+teachers and engage students in uncovering the important ideas at the heart of each
+theme. They can also use these questions to raise more specific questions for the
+respective topics under each theme.
+Another feature of the syllabus is the spiral approach. This is characterised by the
+revisiting of concepts and skills at different levels and with increasing depth. The spiral
+approach allows the learning of scientific concepts and skills to match students’
+cognitive development. It therefore helps students build upon their existing
+understanding of concepts and facilitates the gradual mastery of skills.
+The focus of each theme is given below.
+Diversity
+There is a great variety of living and non-living things around us. Organising this
+diversity of things helps us better understand the world in which we live. There are
+common threads that connect all living things and unifying factors in the diversity of
+non-living things that help us classify them. This theme helps us appreciate the
+importance of maintaining diversity. The essential takeaways and key inquiry
+questions for “Diversity” are:
+Essential Takeaways Key Inquiry Questions
+• There is a great variety of living and
+non-living things around us.
+• We classify living and non-living things
+based on their similarities and
+differences.
+• Maintaining the diversity of living and
+non-living things is important for
+survival.
+• What can we observe around
+us?
+• How can we classify the great
+variety of living and non-living
+things?
+• Why is it important to maintain
+diversity?
+
+-- 14 of 87 --
+
+14
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles
+There are cycles or repeated patterns of change in nature. Understanding cycles, such
+as life cycles and the water cycle, helps us predict events and processes and to
+appreciate the Earth as a self-sustaining system that supports life. The essential
+takeaways and key inquiry questions for “Cycles” are:
+Essential Takeaways Key Inquiry Questions
+• There are repeated patterns of change
+around us.
+• Understanding cycles helps us to make
+predictions about events and processes
+around us.
+• What makes a cycle?
+• How does a cycle help us
+predict events and processes?
+• Why are cycles important to
+life?
+Systems
+A system is a whole consisting of parts that work together to perform function(s). There
+are systems in nature such as plant and human systems; as well as man-made
+systems such as electrical systems. Understanding these systems allows us to
+appreciate how parts influence and work together to perform function(s). The essential
+takeaways and key inquiry questions for “Systems” are:
+Essential Takeaways Key Inquiry Questions
+• A system is made of different parts.
+Each part has its own unique function.
+• Different parts of a system influence
+and work together to perform
+function(s).
+• What is a system?
+• How do different parts / systems
+work together to perform
+function(s)?
+• Why is it important to
+understand how parts/ systems
+work together?
+
+-- 15 of 87 --
+
+15
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions
+Interactions are the actions between and within living and non-living systems in the
+environment. Understanding these interactions helps us see relationships between the
+factors/variables in the environment. We can also appreciate the consequences of our
+actions and play our part in conservation. The essential takeaways and key inquiry
+questions for “Interactions” are:
+Energy
+Energy is required for things to work in everyday life. We use various forms of energy
+for many different purposes. All living things obtain energy and use it to carry out life
+processes. Understanding this theme allows us to appreciate the importance and uses
+of energy and the need to conserve it. The essential takeaways and key inquiry
+questions for “Energy” are:
+Essential Takeaways Key Inquiry Questions
+• Energy is required for things to work.
+• There are various forms of energy and
+they can be converted from one form
+to another.
+• Some sources of energy can be
+depleted and we play an important role
+in energy conservation.
+• What are the different forms of
+energy around us?
+• How is energy used in everyday
+life?
+• Why is it important to conserve
+energy?
+Essential Takeaways Key Inquiry Questions
+• There are interactions among us, living
+and non-living things in the
+environment.
+• Interactions within the environment can
+have positive or negative impacts.
+• Conservation is important to ensure
+continuity of life and availability of
+resources.
+• What are the types of
+interactions around us?
+• How do interactions affect the
+environment and us?
+• Why is it important for us to
+conserve the environment?
+
+-- 16 of 87 --
+
+16
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Practices
+Teachers are encouraged to engage students in the Practices of Science and help
+them understand how scientific knowledge is developed through inquiry. One of the
+components of Practices of Science is the Ways of Thinking and Doing. It supports
+students in learning Science as inquirers and involves various skills and processes.
+For example, the skill of generating possibilities can be used when students are
+engaged in posing questions and defining problem or when they are constructing
+explanations and designing solutions.
+There is no one definite sequence of priority among the Ways of Thinking and Doing.
+For instance, posing questions and defining problems may arise when one is analysing
+and interpreting data or conducting investigations.
+Table 1 below describes each Way of Thinking and Doing and its progression for
+students by the end of Primary 4 and Primary 6. The progression provides a coherent
+and systematic development of skills and processes across levels.
+Ways of thinking and doing
+By the end of P4,
+students should
+be able to:
+By the end of P6,
+students should
+be able to:
+Posing
+questions and
+defining
+problems
+This involves
+asking questions
+to make sense of
+the world (students
+themselves and
+the environment)
+around them.
+• Ask questions out of curiosity or to
+deepen understanding.
+• Ask questions which can be
+investigated.
+Designing
+investigations
+This involves
+formulating
+questions or
+hypotheses and
+designing fair tests
+to find out answers
+to the questions or
+to verify the
+hypotheses.
+• Recognise a fair
+test (changed/
+unchanged
+variables).
+• Design a fair test
+(changed/
+unchanged
+variables).
+
+-- 17 of 87 --
+
+17
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Ways of thinking and doing
+By the end of P4,
+students should
+be able to:
+By the end of P6,
+students should
+be able to:
+Conducting
+investigations
+and testing
+solutions
+This involves
+conducting
+investigations to
+gather data
+through making
+observations using
+our senses or
+instruments. This
+also involves
+knowing the
+functions and
+limitations of
+various apparatus,
+developing the
+ability to select and
+handle them
+appropriately for
+various tasks.
+• Use senses,
+apparatus, and
+equipment to
+gather data.
+• Investigate to
+find out answers
+to questions
+(guided
+investigations).
+• Record and/or
+compare
+observations/
+data with
+suggested
+scaffolding.
+• Use and select
+appropriate
+apparatus and
+equipment to
+gather data.
+• Investigate to find
+out answers to
+questions
+(guided and open
+investigations).
+• Record and/or
+compare
+observations/
+data using a
+variety of forms
+e.g., notes,
+drawings, and
+charts.
+Analysing and
+interpreting data
+This involves
+identifying and
+explaining the
+parts of objects,
+information
+(presented in
+different forms), as
+well as the
+patterns and
+relationships
+between these
+parts.
+• Simple analysis
+of data and
+information in
+representations
+(e.g., tables, bar
+and line graphs,
+charts, and
+diagrams) to
+infer patterns
+and
+relationships or
+explain findings.
+• Analysis of data
+and information
+in
+representations
+(e.g., tables, bar
+and line graphs,
+charts, and
+diagrams) to infer
+patterns and
+relationships or
+explain findings.
+
+-- 18 of 87 --
+
+18
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Ways of thinking and doing
+By the end of P4,
+students should
+be able to:
+By the end of P6,
+students should
+be able to:
+Communicating,
+evaluating and
+defending ideas
+with evidence
+• This involves
+receiving and
+presenting
+information and
+ideas in various
+forms. This also
+involves
+assessing the
+reasonableness,
+accuracy and
+quality of
+information and
+ideas.
+• Communicate (e.g., written, verbal,
+pictorial, tabular or graphical) clear
+explanation and reasoning.
+• Seek clarification to deepen
+understanding.
+Making
+informed
+decisions and
+taking
+responsible
+actions
+This involves
+establishing and
+applying criteria to
+select from among
+seemingly equal
+alternatives. The
+process of
+establishing
+criteria involves
+consideration of
+the consequences
+and values.
+• State or select options based on
+appropriate criteria with reasons.
+Using and
+developing
+models
+This involves using
+multiple
+representations to
+describe, explain
+and predict
+phenomena.
+• Use multiple representations (e.g.,
+pictures, charts, diagrams, tables,
+graphs) to explain concepts, describe
+and predict phenomena.
+
+-- 19 of 87 --
+
+19
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Ways of thinking and doing
+By the end of P4,
+students should
+be able to:
+By the end of P6,
+students should
+be able to:
+Constructing
+explanations
+and designing
+solutions
+This involves
+generating ideas
+and justifying them
+to remedy or alter
+a problem
+situation.
+• Construct possible explanations and
+generate ideas.
+Table 1: Ways of Thinking and Doing
+
+-- 20 of 87 --
+
+20
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Values, Ethics and Attitudes
+In learning Science, the adoption of certain mental attitudes such as Curiosity,
+Creativity, Integrity, Objectivity, Open-mindedness, Resilience, Responsibility and
+Healthy Scepticism is advocated.
+• Curiosity
+Desiring to explore the environment and question what is found.
+• Creativity
+Seeking innovative and relevant ways to solve problems.
+• Integrity
+Handling and communicating data and information with honesty.
+• Objectivity
+Seeking data and information to validate observations and explanations without
+bias.
+• Open-mindedness
+Accepting all knowledge as tentative and suspending judgement. Tolerance for
+ambiguity. Willingness to change views if the evidence is convincing.
+• Resilience
+Not giving up on the pursuit for answers/ solutions. Willingness to take risks and
+embrace failure as part of the learning process.
+• Responsibility
+Showing care and concern for living things and awareness of our responsibility for
+the quality of the environment.
+• Healthy Scepticism
+Questioning the observations, methods, processes, and data, as well as trying to
+review one’s own ideas.
+
+-- 21 of 87 --
+
+21
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Table 2 shows an overview of the topics found in the Primary Science Syllabus. The
+topics are organised in levels to ensure a coherent and meaningful development of
+concepts as students progress from Primary 3 to Primary 6.
+Levels P3 P4 P5 P6
+Themes Diversity . Cycles . Systems . Interactions . Energy
+Topics • Diversity of
+living and non-
+living things
+(General
+characteristics
+and
+classification)
+• Diversity of
+materials
+• Cycles in plants
+and animals
+(Life cycles)
+• Interaction of
+forces
+(Magnets)
+• Plant
+system
+(Plant parts
+and
+functions)
+• Human
+system
+(Digestive
+system)
+• Cycles in
+matter and
+water
+(Matter)
+• Energy
+forms and
+uses (Light)
+• Energy
+forms and
+uses (Heat)
+• Cycles in plants
+and animals
+(Reproduction)
+• Cycles in
+matter and
+water (Water)
+• Plant system
+(Respiratory
+and circulatory
+systems)
+• Human system
+(Respiratory
+and circulatory
+systems)
+• Electrical
+system
+• Energy forms
+and uses
+(Photosynthesis)
+• Energy
+Conversion
+• Interaction of
+forces (Frictional
+force,
+gravitational
+force, elastic
+spring force)
+• Interactions
+within the
+environment
+Topics which are underlined are not required for students taking Foundation Science.
+Table 2: An Overview of the topics in the Primary Science Syllabus
+
+-- 22 of 87 --
+
+22
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 3:
+PEDAGOGY
+Teaching and Learning of Primary Science
+Students as Inquirers
+Teachers as Facilitators
+- Singapore Teaching
+Practice
+- e-Pedagogy
+
+-- 23 of 87 --
+
+23
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+3. PEDAGOGY
+3.1 Teaching and Learning of Primary Science
+We envision students to enjoy learning Science and to value Science in their everyday
+lives (e.g., to make informed decisions and take responsible actions, such as in
+personal health and caring for the environment).
+We believe that all students are curious and want to explore and learn about things
+around them. The Science Curriculum seeks to nurture students as inquirers by
+providing opportunities for them to explore and to appreciate the role of Science for
+Life and Society.
+To nurture students as inquirers, teachers are key in facilitating a variety of learning
+experiences to support students in understanding core ideas, developing practices
+and cultivating values, ethics, and attitudes. These learning experiences can be
+situated in various authentic contexts in both formal and informal settings. The
+experiences should inspire students to inquire and innovate. Teachers can better
+design and enact engaging learning experiences by drawing on the Knowledge Bases
+(for subject matter and goals, refer to sections 1 and 2) and Pedagogical Practices in
+the Singapore Teaching Practice.
+3.1.1 Students as Inquirers
+Learning takes place with the development of skills and dispositions in our students.
+The Primary Science Curriculum seeks to leverage students’ interest and stimulate
+their curiosity about themselves and their environment. They can be provided with
+learning experiences that allow them to pose questions, be involved in discussions on
+socio-scientific issues or be engaged in problem solving, with the use of authentic
+contexts. Through these learning experiences, students are likely to:
+• Ask questions as they engage with an event, phenomenon, problem, or issue. They
+can ask questions which they are interested to find out. The questions can guide
+the design of investigations (e.g., to find out how shadows are formed) so that they
+can draw valid conclusions and solve problems.
+
+-- 24 of 87 --
+
+24
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+• Gather evidence in response to their questions. They can gather evidence through
+observations and/or use of simple equipment to collect either qualitative or
+quantitative data. After the data collection, they can present the evidence gathered
+in appropriate forms (e.g., in tables, charts, graphs) to facilitate the analysis of
+patterns and relationships.
+• Formulate explanations based on the evidence gathered. They can explain using
+their own words using the evidence gathered (e.g., qualitative descriptions of
+observations or quantitative data collected over a time interval).
+• Connect their explanations to various contexts. They can explain how the concepts
+are related or applied in various examples and contexts around them and in the
+environment. This helps them to appreciate how Science is relevant in everyday
+life.
+• Communicate and justify their explanations. They can communicate using various
+types of representations. For example, they can use texts, drawings, charts, tables
+or graphs or a combination of representations to support their explanations.
+• Reflect on their learning and progress. They can reflect on their learning (e.g., what
+they have learnt, how they would like to improve, what they are curious about) in
+different ways (e.g., asking questions, journalling). These reflections help them to
+take greater ownership of their own learning and develop deeper conceptual
+understanding.
+Learning takes place individually and collaboratively, as students construct and co-
+construct meaning from knowledge and experiences. In the learning of Science,
+students should have opportunities to:
+Learn with Others. In understanding and applying concepts and skills, students can
+be engaged in pair, group or whole class interactions. For example, they can share
+their prior knowledge on what they know about shadows in pairs. Students then
+acquire new knowledge about shadows through exploration in a collaborative hands-
+on learning experience. Students can also relate to the natural phenomena and
+applications of light in everyday life through whole class sharing.
+Learn using Different Resources. Students can also learn through various print
+resources (e.g., stories in textbooks, experiments in activity books) and online
+resources (e.g., animations, interactive objects, and videos in the Singapore Student
+Learning Space (SLS)). They can also use everyday materials to test ideas and create
+products (e.g., making their own toys).
+
+-- 25 of 87 --
+
+25
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Learn in Various Environments. Students can observe and/or collect data to
+understand their environment. For example, they can visit nature parks and the zoo to
+observe the diversity of plants and animals. They can also conduct simple experiments
+(e.g., to find a material which can be used to make a bottle to keep the drink warm for
+a longer time).
+The end goal is to have students who enjoy Science and value Science as an
+important tool in helping them explore their natural and physical world.
+3.1.2 Teachers as Facilitators
+In the teaching and learning process, teachers play an important role in stimulating
+students’ curiosity about themselves and their environment, as well as encouraging
+students to see the value of Science and its applications in their everyday lives.
+To do these, teachers should ensure that the learning experiences provided for
+students go beyond learning facts and outcomes of scientific investigations. Teachers
+should play the role of facilitators to support students as inquirers by providing learning
+experiences that vary between guided and open inquiry.
+As facilitators, teachers should:
+• Provide students with opportunities to ask questions about events/ phenomenon/
+problems/ issues that are related to their daily lives, society, and environment.
+• Support students in gathering and using evidence.
+• Encourage students to formulate and communicate explanations based on
+evidence gathered.
+• Encourage students to apply concepts learnt in understanding daily
+events/phenomenon, finding solutions to problems/issues, and creating products.
+• Check on students’ understanding to ascertain if learning has taken place and
+provide appropriate and meaningful feedback to address students’ learning gaps.
+
+-- 26 of 87 --
+
+26
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Singapore Teaching Practice
+Learning takes place in a caring and safe environment. It is important to build positive
+teacher-student relationships to maximise effective teaching and learning (refer to the
+Singapore Teaching Practice OPAL Page on Understanding Teaching for more
+information).
+The Pedagogical Practices (PP) as shown in Figure 4 comprise four fundamental
+teaching processes that epitomise good teaching.
+Positive Classroom Culture. Teachers can create a conducive environment that
+supports student questioning and interactions by building rapport and trust. They can
+set clear expectations and articulate students’ roles to facilitate student group work.
+They can also introduce classroom routines to maximise student participation in whole
+class interactions (e.g., use of small white board for each student to reflect on
+individual responses) and provide opportunities for individual student reflection (e.g.,
+using “exit cards” to reflect on a learning point) as this develops metacognition and
+empowers students to take ownership of their own learning.
+Lesson Preparation. Teachers can collaborate in lesson planning. For example, they
+can plan and sequence learning experiences for each topic to ensure coherent
+development of conceptual understanding and application of concepts to various
+contexts. For each lesson, teachers can also explore key questions, instructional
+strategies and resources to use, based on students’ conceptions, profiles and needs.
+Lesson Enactment. Teachers can use suitable instructional strategies to elicit students’
+prior knowledge (e.g., find out what students know and want to know) and capture
+their interest (e.g., through a story) at the start of a lesson. To continue engaging
+students and maintaining the momentum of the lesson, teachers can use questions to
+scaffold or deepen student understanding in either whole class interaction or group
+work. It is also important to consolidate students’ learning when concluding the lesson.
+Assessment and Feedback. When facilitating students’ learning, teachers can check
+for students’ understanding and provide feedback to address their alternative
+conceptions. They can also design meaningful assignments for students to reflect on
+their own learning, as well as to show and apply their understanding in various contexts.
+Assessment and Feedback will be elaborated in the section on Assessment.
+
+-- 27 of 87 --
+
+27
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Figure 4: Pedagogical Practices
+Teachers need to exercise professional judgement in enacting the four teaching
+processes. They can use a variety of instructional strategies to design meaningful
+learning experiences in various authentic contexts to support students as inquirers. A
+brief description of each of these instructional strategies is also given below:
+Concept Cartoon
+In concept cartoons,
+minimal language is used.
+Visual images are used to
+present concepts or
+questions relating to one
+central idea or word.
+Field Trip
+A field trip is any outdoor
+learning experience which
+provides opportunities for
+students to explore,
+discover and experience
+Science in everyday life.
+CC
+
+-- 28 of 87 --
+
+28
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Concept Mapping
+Concept mapping presents
+meaningful relationships
+among concepts. Concept
+maps are useful in
+organising and linking
+concepts or ideas.
+Games
+Games engage students in
+play or simulations for the
+learning of concepts or
+skills. This is useful in
+helping students to
+visualise or illustrate
+objects or processes in the
+real world.
+Cooperative Learning
+In cooperative learning,
+activities are structured
+such that each student
+assumes certain
+responsibilities and
+contributes to the
+completion of tasks. In
+working with others,
+students are exposed to
+different points of views
+and solutions in
+accomplishing a common
+goal.
+Investigation
+In scientific investigation,
+students engage in
+experiences that mirror
+how scientists think and do
+in a decision-making
+process, such as
+observing, posing
+questions and planning or
+designing investigations.
+Demonstration
+Demonstration is
+commonly used to scaffold
+the learning process. This
+approach is recommended
+when the learning
+experience is not safe or
+too complex for students to
+set up on their own.
+Problem Solving
+Problem solving engages
+students in finding
+solutions to problems by
+applying scientific
+concepts and skills.
+i
+
+-- 29 of 87 --
+
+29
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Projects
+Projects allow students to
+show understanding and
+application of concepts
+and skills through creating
+and making.
+Role Play, Drama, Dance
+and Movement
+Role play, drama, dance
+and movement allow
+students to deepen and
+express their
+understanding of scientific
+concepts and processes in
+creative ways.
+Questioning
+Questions are useful tools
+in the learning process.
+Both teachers and
+students should engage in
+cycles of questions-
+answers-questions
+throughout the learning
+process.
+Stories
+Stories of Science in
+everyday life and of
+scientists can capture
+students’ interest and
+engage them in talking
+about Science. Either the
+teacher or students can be
+the story creator or teller.
+Teachers are also encouraged to leverage the planned learning experiences to
+infuse Information and Communication Technology (ICT) and National Education.
+Information and
+Communication
+Technology
+ICT supports the students
+as inquirers and facilitates
+student collaboration and
+self-directed learning.
+National Education
+National Education is
+infused into the curriculum
+to allow students to see
+how scientific phenomena
+and developments can
+contribute to or affect the
+nation.
+?
+NE
+
+-- 30 of 87 --
+
+30
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Where appropriate, students can be provided with opportunities to cultivate values, ethics
+and attitudes which are relevant to the study of Science. Teachers are also encouraged
+to incorporate the ethical aspect of Science wherever possible throughout the syllabus.
+Values, Ethics and Attitudes
+The adoption of certain mental attitudes such as Curiosity, Creativity,
+Objectivity, Integrity, Open-mindedness, Resilience, Responsibility and
+Healthy Scepticism is advocated. Students can also discuss the ethical
+implications of Science and Technology.
+In the teaching and learning of Science, teachers are encouraged to use a mix and
+match of instructional strategies. Each instructional strategy is not limited to a teaching
+process in STP. For example, questioning is relevant in the four teaching processes,
+as illustrated below.
+• Positive classroom culture: Teachers create a safe environment for students to
+ask questions.
+• Lesson preparation: Teachers plan key questions that encourage student
+thinking and discussion.
+• Lesson enactment: Teachers exercise flexibility in asking further questions to
+address alternative conceptions or elicit alternative perspectives.
+• Assessment and feedback: Teachers use students’ responses to identify
+alternative conceptions or plan for the next learning experience.
+
+-- 31 of 87 --
+
+31
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+e-Pedagogy
+Science teaching and learning can also be enhanced with technology. Technology can
+transform the culture of learning to be more participative, reflective, and connected by
+enhancing student engagement, deepening learning, and giving greater student
+agency and ownership of learning. Teachers can adopt e-Pedagogy to design a range
+of learning experiences for students to develop the knowledge, skills, and dispositions.
+Teachers can tap on the Key Applications of Technology (KAT), as shown in Figure
+5, to select appropriate technological tools based on their pedagogical affordances
+and apply technologies to support student-student interactions and active learning in
+Science. For example, online collaboration tools can be used by teachers to facilitate
+students’ co-construction of knowledge through scientific experimentation/
+investigations (inquiry-based learning) or discussion of application of Science in
+everyday contexts. More information can be found on the e-Pedagogy one-stop site.
+Figure 5: Key Applications of Technology
+
+-- 32 of 87 --
+
+32
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 4:
+ASSESSMENT
+Assessment and Feedback
+Guidelines for Assessment
+
+-- 33 of 87 --
+
+33
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+4. ASSESSMENT
+Assessment is integral to teaching and learning process. In designing assessments,
+teachers need to have clarity of purpose. It involves gathering and analysing evidence
+about students’ learning through various assessment techniques and making
+appropriate educational decisions for teaching and learning. Assessment provides
+teachers with information about students’ progress and development in relation to the
+learning objectives. With this information, teachers make informed decisions about
+what should be done to enhance the learning of the students and to improve teaching
+methods.
+4.1 Assessment and Feedback
+Why Assess?
+Assessment measures the extent to which desired knowledge, skills and attitudes are
+attained by students. It can serve different purposes in the school and classroom.
+Having clarity of purpose is essential for understanding the strengths and limitations
+of using a particular source of assessment information for decision-making. While it
+complements the teaching and learning process, it also provides formative and
+summative feedback to students, teachers, schools, and parents. A balanced
+assessment system consists of both Assessment of Learning as well as Assessment
+for Learning. Assessments can provide both quantitative and/or qualitative
+descriptions of learner performance that give feedback for improving future practices.
+• Assessment provides feedback to students, allows them to understand their
+strengths and weaknesses. Through assessment, students can monitor their own
+performance and progress. It also points them in the direction they should go to
+improve further.
+• Assessment provides feedback to teachers, enables them to understand the
+strengths and weaknesses of their students. It provides information about students’
+attainment of learning outcomes as well as the effectiveness of their teaching.
+• Assessment provides feedback to schools. The information gathered facilitates
+the placement of students in the appropriate course, and the promotion of students
+
+-- 34 of 87 --
+
+34
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+from one level to the next. It also allows the schools to review the effectiveness of
+their instructional programmes.
+• Assessment provides feedback to parents, allowing them to monitor their child’s
+progress through the information obtained.
+What and How to Assess?
+The aims of the Primary Science Syllabus are for students to acquire Science
+concepts, develop skills and cultivate values, ethics and attitudes and apply them in
+authentic, relevant daily life contexts. The assessment objectives of the syllabus are
+aligned to the three domains in the Science curriculum framework.
+As assessment serves many purposes, it is important to match the type of assessment
+to the specific purpose for which it is intended. Before making an assessment about a
+certain aspect of students’ performance, teachers should ensure that the assessment
+mode used will generate information that reflects accurately the aspect of performance
+teachers intend to assess.
+In the teaching and learning of Science, assessment can take many forms. In addition
+to the written tests, teachers can also conduct performance-based assessment using
+the following modes:
+• Checklists
+• Debates
+• Drama / Show and Tell
+• Games and Quizzes
+• Learning Trails
+• Model-making
+• Posters
+• Practicals
+• Projects
+• Reflections / Journals
+• Teacher Observations
+Teachers can also assess students’ learning using portfolios. It is a systematic and
+purposeful collection of students’ work and provides a comprehensive picture of their
+development and progress in the acquisition of knowledge, understanding of scientific
+
+-- 35 of 87 --
+
+35
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+concepts, application of skills, and development of attitudes. Students can select the
+pieces which will go into the portfolio which provides opportunity for the students to
+have self-evaluation and reflections by revisiting their own portfolio of their work.
+The assessment modes listed above are by no means exhaustive. Adopting a variety
+of assessment modes enables the teachers to assess different aspects of teaching
+and learning.
+4.2 Guidelines for Assessment
+It is essential for assessment to be aligned to the intended learning outcomes. School-
+based assessment provides quantitative and qualitative information about a student’s
+progress and development, and such information can be used to inform learning and
+shape future teaching and learning practices. Table 3 below presents the
+recommended weighting for school-based assessment:
+Table 3: Recommended Weighting for School-based Assessment
+Written Tests Performance-based
+assessments Total
+Standard
+Science 70% - 85% 15% - 30% 100%
+Foundation
+Science 70% - 85% 15% - 30% 100%
+
+-- 36 of 87 --
+
+36
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 5:
+SYLLABUS
+LEARNING OUTCOMES
+
+-- 37 of 87 --
+
+37
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+5. SYLLABUS LEARNING OUTCOMES
+About Diversity:
+There is a great variety of living and non-living things around
+us. Organising this diversity of things helps us better
+understand the world in which we live. There are common
+threads that connect all living things and unifying factors in
+the diversity of non-living things that help us classify them.
+This theme helps us appreciate the importance of
+maintaining diversity.
+Essential Takeaways:
+• There is a great variety of living and non-living
+things around us.
+• We classify living and non-living things based
+on their similarities and differences.
+• Maintaining the diversity of living and non-living
+things is important for survival.
+Key Inquiry Questions:
+• What can we observe around us?
+• How can we classify the great variety of living
+and non-living things?
+• Why is it important to maintain diversity?
+
+-- 38 of 87 --
+
+38
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Diversity of Living and Non-Living Things (General characteristics and classification) (P3)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Describe the characteristics of living
+things.
+- Need water, food and air to survive
+- Grow, respond and reproduce
+• Recognise some broad groups of living
+things based on similarities and
+differences.
+- Plants (flowering, non-flowering)
+- Animals (amphibians, birds, fish,
+insects, mammals, reptiles)
+- Fungi (mould, mushroom, yeast)
+- Bacteria
+Note:
+- Recall of names of specific living things
+(e.g., guppy) and their characteristics
+(e.g., give birth to young alive) is not
+required.
+• Observe a variety of living and non-living
+things and infer differences between them.
+• Classify living things into broad groups (in
+plants and animals) based on similarities
+and differences of common observable
+characteristics.
+• Show curiosity by
+questioning and exploring
+the surrounding living and
+non-living things.
+• Show care and concern by
+being responsible towards
+living things.
+
+-- 39 of 87 --
+
+39
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Diversity of Materials (P3)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Relate the use of various types of
+materials (wood, metal, ceramic,
+rubber, glass, plastic, fabric) to their
+physical properties.
+• Compare physical properties of materials.
+- Strength
+- Flexibility
+- Ability to float/sink in water
+- Waterproof
+- Transparency
+Note:
+- The focus is on how the properties of materials
+are used.
+- The “strength” of a material is its ability to be
+subjected to loads without breaking.
+- The “flexibility” of a material is its ability to
+bend without breaking.
+- The “ability to float on water” refers to whether
+an object is able to stay on or near the surface
+of water and not sink. (The concept of density
+is not required.)
+- A material is “waterproof” when it does not
+absorb water.
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about the
+properties and uses of
+materials.
+
+-- 40 of 87 --
+
+40
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Diversity of Materials (P3)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+- The “transparency” of a material refers to
+whether the material allows most/ some or no
+light to pass through. (The use of terms –
+transparent/ translucent/ opaque is not
+required.)
+
+-- 41 of 87 --
+
+41
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+About Cycles:
+There are cycles or repeated patterns of change in nature.
+Understanding cycles, such as life cycles and the water
+cycle, helps us predict events and processes and to
+appreciate the Earth as a self-sustaining system that
+supports life.
+Essential Takeaways:
+• There are repeated patterns of change around
+us.
+• Understanding cycles helps us to make
+predictions about events and processes around
+us.
+Key Inquiry Questions:
+• What makes a cycle?
+• How does a cycle help us predict events and
+processes?
+• Why are cycles important to life?
+
+-- 42 of 87 --
+
+42
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Life Cycles) (P3)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Show an understanding that different
+living things have different life cycles.
+- Plants
+- Animals
+• Observe and compare the life cycles of
+plants grown from seeds over a period of
+time.
+Note:
+- The focus is on the stages (seed, young
+plant, adult plant) of flowering plants.
+Processes in plant reproduction (pollination,
+fertilisation, seed dispersal and germination)
+are introduced in the topic of Cycles in
+Plants and Animals (Reproduction) in P5.
+• Observe and compare the life cycles of
+animals over a period of time (chicken,
+cockroach, frog, grasshopper, beetle,
+butterfly, mosquito)
+• Show curiosity by
+questioning and exploring
+the surrounding plants and
+animals.
+• Show care and concern by
+being responsible towards
+plants and animals.
+
+-- 43 of 87 --
+
+43
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Reproduction) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that a cell is a basic unit of
+life.
+• Show an understanding that living
+things reproduce to ensure continuity of
+their kind and that many characteristics
+of an organism are passed on from
+parents to offspring.
+• Describe processes in the sexual
+reproduction of flowering plants.
+- Pollination
+- Fertilisation (seed production)
+- Seed dispersal
+- Germination
+Note:
+- Fertilisation occurs when a male
+reproductive cell fuses with a female
+reproductive cell.
+• Investigate the ways in which plants
+reproduce.
+- Spores
+- Seeds
+Note:
+- Vegetative propagation methods, such as
+stem cutting, are not required.
+• Show curiosity by
+questioning and exploring
+the surrounding plants
+and animals.
+• Show care and concern
+by being responsible
+towards plants and
+animals.
+
+-- 44 of 87 --
+
+44
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Reproduction) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+- The use of specific terms (“self-
+pollination” and “cross-pollination”) to
+describe the pollination process is not
+required.
+- Knowledge of the pollen tube formation
+is not required.
+- The specific location where fertilisation
+takes place in the female reproductive
+system is not required.
+• Recognise the process of fertilisation in
+the sexual reproduction of humans.
+Note:
+- Fertilisation occurs when a sperm fuses
+with an egg.
+- The fertilised egg develops in the
+womb.
+- Students should know that ovaries
+produce eggs, and the testes produce
+sperms.
+
+-- 45 of 87 --
+
+45
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Reproduction) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+- Foetal development and the mechanism
+of obtaining air, food and water through
+the umbilical cord are not required.
+• Recognise the similarity in terms of
+fertilisation in the sexual reproduction of
+flowering plants and humans.
+
+-- 46 of 87 --
+
+46
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Reproduction) (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• State the processes in the sexual
+reproduction of flowering plants.
+- Pollination
+- Fertilisation (seed production)
+- Seed dispersal
+- Germination
+Note:
+- Fertilisation is the process that leads to
+the development of fruits and seeds.
+- The use of specific terms (“self-
+pollination” and “cross-pollination”) to
+describe the pollination process is not
+required.
+• State the process of fertilisation in the
+sexual reproduction of humans.
+• Observe and compare the ways in which
+plants reproduce.
+- Spores
+- Seeds
+Note:
+- Vegetative propagation methods, such as
+stem cutting, are not required.
+• Show curiosity by
+questioning and exploring
+the surrounding plants and
+animals.
+• Show care and concern by
+being responsible towards
+plants and animals.
+
+-- 47 of 87 --
+
+47
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Plants and Animals (Reproduction) (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+Note:
+- Fertilisation occurs when a sperm fuses
+with an egg.
+- The fertilised egg develops in the womb.
+- Students should know that ovaries
+produce eggs, and the testes produce
+sperms.
+- Foetal development and the mechanism
+of obtaining air, food and water through
+the umbilical cord are not required.
+
+-- 48 of 87 --
+
+48
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Matter and Water (Matter) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• State that matter is anything that has
+mass and occupies space.
+• Differentiate among the three states of
+matter (solid, liquid, gas) in terms of
+shape and volume.
+• Measure mass and volume using
+appropriate apparatus.
+• Show curiosity in exploring
+matter in the surroundings
+and question what they
+find.
+
+-- 49 of 87 --
+
+49
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Matter and Water (Water) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that water can exist in three
+interchangeable states of matter.
+• Show an understanding of how water
+changes from one state to another.
+- Melting (solid to liquid)
+- Freezing (liquid to solid)
+- Boiling/Evaporation (liquid to gas)
+- Condensation (gas to liquid)
+• Show an understanding of the terms
+melting point of ice (or freezing point of
+water) and boiling point of water.
+• Show an understanding of the roles of
+evaporation and condensation in the
+water cycle.
+• Recognise the importance of the water
+cycle.
+• Compare water in 3 states.
+• Investigate the effect of heat gain or loss on
+the temperature and state of water.
+- When ice is heated, it melts and
+changes to water at 0oC.
+- When water is cooled, it freezes and
+changes to ice at 0oC.
+- When water is heated, it boils and
+changes to steam at 100oC.
+- When steam is cooled, it condenses to
+water.
+• Investigate the factors which affect the rate
+of evaporation.
+- Wind
+- Temperature
+- Exposed surface area
+• Show concern for water as
+a limited natural resource
+and be responsible in
+conserving.
+
+-- 50 of 87 --
+
+50
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Matter and Water (Water) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise the importance of water to life
+processes.
+• Describe the impact of water pollution on
+Earth’s water resources.
+
+-- 51 of 87 --
+
+51
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Cycles in Matter and Water (Water) (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that water can exist in three
+interchangeable states of matter.
+• State how water changes from one state
+to another.
+- Melting (solid to liquid)
+- Freezing (liquid to solid)
+- Boiling/Evaporation (liquid to gas)
+- Condensation (gas to liquid)
+• State the melting point of ice (or freezing
+point of water) and boiling point of water.
+• Recognise the changes in states of water
+in the water cycle.
+• Recognise the importance of the water
+cycle.
+• Compare water in 3 states. • Show concern for water
+as a limited natural
+resource and be
+responsible in conserving.
+
+-- 52 of 87 --
+
+52
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+About Systems:
+A system is a whole consisting of parts that work together
+to perform function(s). There are systems in nature such as
+plant and human systems; as well as man-made systems
+such as electrical systems. Understanding these systems
+allows us to appreciate how parts influence and work
+together to perform function(s).
+Essential Takeaways:
+• A system is made of different parts. Each part
+has its own unique function.
+• Different parts of a system influence and work
+together to perform function(s).
+Key Inquiry Questions:
+• What is a system?
+• How do different parts/systems work together to
+perform function(s)?
+• Why is it important to understand how
+parts/systems work together?
+
+-- 53 of 87 --
+
+53
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Human System (Digestive System) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify the human systems in the body
+and state their functions (digestive,
+respiratory, circulatory, skeletal and
+muscular).
+Note:
+- This learning outcome introduces
+students to an overview of human
+systems in the body. Detailed knowledge
+of the muscular and skeletal systems
+(such as names of the bones/muscles in
+the body and descriptions of how they
+work) are not required.
+• Identify the parts in the human digestive
+system (mouth, gullet, stomach, small
+intestine and large intestine) and
+describe their functions.
+• Show curiosity in
+questioning about the
+structures or functions of
+the body.
+
+-- 54 of 87 --
+
+54
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Human System (Respiratory and circulatory systems) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that air is made up of gases
+such as nitrogen, carbon dioxide, oxygen
+and water vapour.
+• Identify the parts of the human
+respiratory (nose, windpipe, lungs) and
+circulatory systems (heart, blood, blood
+vessels) and describe their functions.
+Note:
+- Detailed knowledge of respiratory system
+(e.g., alveoli) and circulatory system
+(e.g., heart chambers and valves) is not
+required.
+• Recognise the integration of the different
+systems (digestive, respiratory and
+circulatory) in carrying out life processes.
+• Compare how plants, fish and humans
+take in oxygen and give out carbon
+dioxide.
+• Compare the ways in which substances
+are transported within plants and humans.
+- Plants: Tubes that transport food and
+water
+- Humans: Blood vessels that transport
+digested food, oxygen and carbon
+dioxide
+Note:
+- The use of specific terms (xylem, phloem,
+stomata, artery, vein, capillary) is not
+required.
+• Show objectivity by
+seeking data and
+information to validate
+observations and
+explanations about the
+human body.
+
+-- 55 of 87 --
+
+55
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Human System (Respiratory and circulatory systems) (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that air is made up of gases
+such as nitrogen, carbon dioxide, oxygen
+and water vapour.
+• Identify the parts of the human
+respiratory (nose, windpipe, lungs) and
+circulatory systems (heart, blood, blood
+vessels) and state their functions.
+Note:
+- Detailed knowledge of respiratory system
+(e.g., alveoli) and circulatory system
+(e.g., heart chambers and valves) is not
+required.
+• Compare how plants and humans take in
+oxygen and give out carbon dioxide.
+Note:
+- The use of specific terms (xylem, phloem
+and stomata, artery, vein, capillary) is not
+required.
+• Show objectivity by
+seeking data and
+information to validate
+observations and
+explanations about the
+human body.
+
+-- 56 of 87 --
+
+56
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Plant System (Plant parts and functions) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify the different parts of plants and
+state their functions.
+- Leaf
+- Stem
+- Root
+Note:
+- Food-carrying and water-carrying tubes
+in the plant transport system are
+introduced in the topic of Plant System
+(Respiratory and Circulatory Systems) in
+P5.
+• Observe plant parts. • Show curiosity in exploring
+the surrounding plants and
+question what they find.
+• Show care and concern by
+being responsible towards
+plants.
+
+-- 57 of 87 --
+
+57
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Plant System (Respiratory and circulatory systems) (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify the parts of the plant transport
+system and describe their functions.
+Note:
+- Recall of the relative positions of water-
+carrying and food-carrying tubes is not
+required.
+- The use of specific terms (xylem and
+phloem) is not required.
+- The concept of transpiration pull is not
+required.
+• Investigate how food and water are
+transported in the plant.
+• Show objectivity by
+seeking data and
+information to validate
+observations and
+explanations about plant
+parts and functions.
+• Show care and concern by
+being responsible towards
+plants.
+
+-- 58 of 87 --
+
+58
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Plant System (Respiratory and circulatory systems) (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise how water is transported from
+the roots to other parts of the plant and
+how food is transported from the leaves
+to other parts of the plant.
+Note:
+- Recall of the relative positions of water-
+carrying and food-carrying tubes is not
+required.
+- The use of specific terms (xylem and
+phloem) is not required.
+- The concept of transpiration pull is not
+required.
+• Observe how food and water are
+transported in the plant.
+• Show objectivity by
+seeking data and
+information to validate
+observations and
+explanations about plant
+parts and functions.
+• Show care and concern by
+being responsible towards
+plants.
+
+-- 59 of 87 --
+
+59
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Electrical System (P5 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that an electric circuit
+consisting of an energy source (battery)
+and other circuit components (wire, bulb,
+switch) forms an electrical system.
+• Show an understanding that a closed
+circuit allows current to flow.
+• Identify electrical conductors and
+insulators.
+• Construct simple circuits from circuit
+diagrams.
+• Investigate the effect of some variables on
+the current in a circuit.
+- Number of batteries (arranged in
+series)
+- Number of bulbs (arranged in series
+and parallel)
+• Show concern for the need
+to conserve and to have
+proper use and handling of
+electricity.
+
+-- 60 of 87 --
+
+60
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Electrical System (P5 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that an electric circuit
+consisting of an energy source
+(battery) and other circuit components
+(wire, bulb, switch) forms an electrical
+system.
+• State that a closed circuit allows
+current to flow.
+• Identify electrical conductors and
+insulators.
+• Construct simple circuits from circuit
+diagrams.
+• Investigate the effect of some variables on
+the current in a circuit.
+- Number of batteries (arranged in series)
+- Number of bulbs (arranged in series)
+• Show concern for the
+need to conserve and to
+have proper use and
+handling of electricity.
+
+-- 61 of 87 --
+
+61
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+About Interactions:
+Interactions are the actions between and within living and
+non-living systems in the environment. Understanding
+these interactions helps us see relationships between the
+factors/ variables in the environment. We can also
+appreciate the consequences of our actions and play our
+part in conservation.
+Essential Takeaways:
+• There are interactions among us, living and non-
+living things in the environment.
+• Interactions within the environment can have
+positive or negative impacts.
+• Conservation is important to ensure continuity of
+life and availability of resources.
+Key Inquiry Questions:
+• What are the types of interactions around us?
+• How do interactions affect the environment and
+us?
+• Why is it important for us to conserve the
+environment?
+
+-- 62 of 87 --
+
+62
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interaction of Forces (Magnets) (P3)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that a magnet can exert a
+push or a pull.
+• Identify the characteristics of magnets.
+- Magnets can be made of iron or steel.
+- Magnets have two poles. A freely
+suspended bar magnet comes to rest
+pointing in a North-South direction.
+- Unlike poles attract and like poles
+repel.
+- Magnets attract magnetic materials.
+Note:
+- Recall of magnetic materials such as
+nickel and cobalt is not required.
+- Magnetic shielding and magnetic
+induction are not required.
+• Recognise uses of magnets in everyday
+objects.
+• Compare magnets, non-magnetic materials
+and magnetic materials.
+• Make a magnet by the stroke method and
+the electrical method.
+• Show curiosity in exploring
+the uses of magnets in
+everyday life.
+
+-- 63 of 87 --
+
+63
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interaction of Forces (Frictional force, gravitational force, elastic spring force) (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify a force as a push or a pull.
+• Show an understanding of the effects of a
+force.
+- A force can move a stationary object.
+- A force can speed up, slow down or
+change the direction of motion.
+- A force can stop a moving object.
+- A force may change the shape of an
+object.
+• Recognise and give examples of the
+different types of forces.
+- Magnetic force
+- Gravitational force
+- Elastic spring force
+- Frictional force
+• Investigate the effect of frictional force on
+the motion of objects.
+• Investigate the effects of elastic spring
+force.
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about forces.
+
+-- 64 of 87 --
+
+64
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interaction of Forces (Frictional force, gravitational force, elastic spring force) (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+Note:
+- Direction of frictional force for “rolling
+objects” such as wheels and balls is not
+required.
+- The use of specific terms such as ‘air
+resistance’ and ‘water resistance’ is not
+required.
+• Recognise that objects have weight
+because of the gravitational force acting
+on the object.
+
+-- 65 of 87 --
+
+65
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interaction of Forces (Frictional force, gravitational force) (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify a force as a push or a pull.
+• State the effects of a force.
+- A force can move a stationary object.
+- A force can speed up, slow down or
+change the direction of motion.
+- A force can stop a moving object.
+A force may change the shape of an
+object.
+• Recognise and give examples of the
+different types of forces.
+- Magnetic force
+- Gravitational force
+- Frictional force
+Note:
+- Direction of frictional force for “rolling
+objects” such as wheels and balls is not
+required.
+• Investigate the effect of frictional force on
+the motion of objects.
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about forces.
+
+-- 66 of 87 --
+
+66
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interaction of Forces (Frictional force, gravitational force) (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+- The use of specific terms such as ‘air
+resistance’ and ‘water resistance’ is not
+required.
+• Recognise that objects have weight
+because of the gravitational force acting
+on the object.
+
+-- 67 of 87 --
+
+67
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify the factors that affect the survival
+of an organism.
+- Physical characteristics of the
+environment (temperature, light, water)
+- Availability of food
+- Types of other organisms
+present (producers, consumers,
+decomposers)
+• Show an understanding of the effect on
+organisms when the environment
+becomes unfavourable (organisms adapt
+and survive; move to other places or die).
+• Show an understanding of the energy
+pathway from the Sun through living things
+and identify the roles of various organisms
+(producers, consumers, predators, prey) in
+a food chain and a food web.
+• Observe, collect and record information
+regarding the interacting factors within an
+environment.
+• Show care and concern for
+Man’s impact on the
+environment by being
+respectful and responsible
+towards the environment.
+
+-- 68 of 87 --
+
+68
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Differentiate among organism, population
+and community.
+- An organism is a living thing.
+- A population is a group of organisms of
+the same kind, living and reproducing
+at a given place and time.
+- A community consists of many
+populations living together in a
+particular place.
+• Show an understanding that different
+habitats support different communities
+(garden, field, pond, seashore, tree,
+mangrove swamp).
+
+-- 69 of 87 --
+
+69
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Show an understanding that adaptations
+serve to enhance survival and can be
+structural or behavioural.
+- Cope with physical factors
+- Obtain food
+- Escape predators
+- Reproduce by finding and attracting
+mates or dispersing seeds/fruits
+Note:
+- Students are introduced to the types of
+dispersal methods and physical
+characteristics of different fruits and seeds
+in the theme of Cycles. The focus in this
+theme is to help students recognise that
+physical characteristics are the “structural
+adaptations” which help fruits and seeds in
+their dispersal.
+
+-- 70 of 87 --
+
+70
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Give examples of man’s impact (both
+positive and negative) on the environment.
+Note:
+- Positive impact [Conservation,
+Reforestation]
+- Negative impact [Depleting natural
+resources, deforestation, pollution
+(land/water/air), global warming]
+
+-- 71 of 87 --
+
+71
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify the factors that affect the survival
+of an organism.
+- Physical characteristics of the
+environment (temperature, light, water)
+- Availability of food
+- Types of other organisms
+present (producers, consumers,
+decomposers)
+• Recognise the energy pathway from the
+Sun through living things and identify the
+roles of various organisms (producers,
+consumers, predators, prey) in a food
+chain.
+• Recognise that different habitats support
+different organisms (garden, field, pond,
+seashore, tree, mangrove swamp).
+• Observe, collect, and record information
+regarding the interacting factors within an
+environment.
+• Show care and concern for
+Man’s impact on the
+environment by being
+respectful and responsible
+towards the environment.
+
+-- 72 of 87 --
+
+72
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that adaptations serve to
+enhance survival and can be structural or
+behavioural.
+- Cope with physical factors
+- Obtain food
+- Escape predators
+- Reproduce by finding and attracting
+mates or dispersing seeds/fruits
+Note:
+- Students are introduced to the types of
+dispersal methods and physical
+characteristics of different fruits and seeds
+in the theme of Cycles. The focus in this
+theme is to help students recognise that
+physical characteristics are the “structural
+adaptations” which help fruits and seeds in
+their dispersal.
+
+-- 73 of 87 --
+
+73
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Interactions within the Environment (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Give examples of man’s impact (both
+positive and negative) on the environment.
+Note:
+- Positive impact [Conservation,
+Reforestation]
+- Negative impact [Depleting natural
+resources, deforestation, pollution
+(land/water/air), global warming]
+
+-- 74 of 87 --
+
+74
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+About Energy:
+Energy is required for things to work in everyday life. We use
+various forms of energy for many different purposes. All living
+things obtain energy and use it to carry out life processes.
+Understanding this theme allows us to appreciate the
+importance and uses of energy and the need to conserve it.
+Essential Takeaways:
+• Energy is required for things to work.
+• There are various forms of energy and they can
+be converted from one form to another.
+• Some sources of energy can be depleted and we
+play an important role in energy conservation.
+Key Inquiry Questions:
+• What are the different forms of energy around
+us?
+• How is energy used in everyday life?
+• Why is it important to conserve energy?
+
+-- 75 of 87 --
+
+75
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Forms and Uses (Light) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that an object can be seen
+when it reflects light or when it is a source
+of light.
+Note:
+- The law of reflection is not required.
+• Recognise that light travels in straight lines
+and thus a shadow is formed when light is
+completely or partially blocked by an
+object.
+• Investigate the variables that affect
+shadows formed.
+- Shape, size and position of object(s)
+- Distance between light source-object
+and object-screen
+Note:
+- The use of specific terms (transparent,
+translucent, opaque) is not required.
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about light.
+
+-- 76 of 87 --
+
+76
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Forms and Uses (Heat) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Identify some common sources of heat.
+• State that the temperature of an object is a
+measurement of its degree of hotness.
+• State that heat is a form of energy.
+• Differentiate between heat and
+temperature.
+• Show an understanding that heat flows
+from a hotter to a colder object/ region/
+place until both reach the same
+temperature.
+• Relate the change in temperature of an
+object to the gain or loss of heat by the
+object.
+• Measure temperature using a
+thermometer and a datalogger with
+temperature/heat sensors.
+• Show objectivity by
+seeking data and
+information to validate
+observations and
+explanations about heat.
+
+-- 77 of 87 --
+
+77
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Forms and Uses (Heat) (P4)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• List some effects of heat gain/loss in our
+everyday life.
+- Contraction / expansion of objects
+(solid, liquid and gas)
+- Change in state of matter
+• Identify good and poor conductors of heat.
+- Good conductors: metals
+- Poor conductors: wood, plastics, air,
+rubber
+Note:
+- Recall of the rate of heat transfer of
+specific materials (such as different types
+of metals) is not required.
+
+-- 78 of 87 --
+
+78
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Forms and Uses (Photosynthesis) (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that living things need energy
+from respiration to carry out life processes.
+Note:
+- The focus of respiration is on the release
+of energy from food.
+• Recognise that the Sun is our primary
+source of energy (light and heat).
+• Differentiate between the ways in which
+plants and animals obtain energy.
+• Investigate the requirements (water,
+light energy and carbon dioxide) for
+photosynthesis (production of sugar and
+oxygen).
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about
+photosynthesis.
+
+-- 79 of 87 --
+
+79
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Forms and Uses (Photosynthesis) (P6 Foundation)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that the Sun is our primary
+source of energy (light and heat).
+• Investigate the requirements (water,
+light energy and carbon dioxide) for
+photosynthesis (production of sugar and
+oxygen).
+• Show objectivity by using
+data and information to
+validate observations and
+explanations about
+photosynthesis.
+
+-- 80 of 87 --
+
+80
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Energy Conversion (P6 Standard)
+Learning Outcomes
+Core Ideas Practices Values, Ethics and Attitudes
+• Recognise that energy from most of our
+energy resources is derived in some ways
+from the Sun.
+• Recognise and give examples of the
+various forms of energy.
+- Kinetic energy
+- Potential energy
+- Light energy
+- Electrical energy
+- Sound energy
+- Heat energy
+Note:
+- The use of specific terms (chemical
+potential energy, gravitational potential
+energy and elastic potential energy) is not
+required.
+• Investigate energy conversion from one
+form to another.
+• Show care and concern by
+being responsible in
+conserving energy in our
+everyday life.
+
+-- 81 of 87 --
+
+81
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 6:
+GLOSSARY OF TERMS
+
+-- 82 of 87 --
+
+82
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+6. GLOSSARY OF TERMS
+No
+. Term Description of meaning
+1. analyse to identify the parts of objects, information or processes,
+and the patterns and relationships between these parts
+2. classify to group objects or events based on common
+characteristics
+3. communicate to transmit and receive information which is presented in
+various forms – written, verbal, pictorial, tabular or
+graphical
+4. compare to identify similarities and differences between objects,
+concepts or processes
+5. construct to put a set of components together, based on a given plan
+6. describe to write (using diagrams where appropriate) the main points
+of a topic
+7. differentiate to identify the differences between objects, concepts or
+processes
+8. evaluate to assess the reasonableness, accuracy and quality of
+information, processes or ideas
+9. formulate
+hypothesis
+to make a general explanation for a related set of
+observations or events. It is an extension of inferring
+10. generate
+possibilities
+to explore all the alternatives, possibilities and choices
+beyond the obvious or preferred one
+11. identify to select and/or name the object, event, concept or process
+12. infer to explain or draw a conclusion based on observations,
+data or information
+13. investigate to find out answers to the questions or to verify the
+hypotheses
+14. list to give a number of points or items without elaboration
+15. make
+decisions
+to establish and apply criteria to select from among
+seemingly equal alternatives. The process of establishing
+criteria involves consideration of the consequences and
+values
+16. measure to obtain a reading from a suitable measuring instrument
+17. observe to obtain information through the use of the senses
+
+-- 83 of 87 --
+
+83
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+No
+. Term Description of meaning
+18. predict to assess the likelihood of an outcome based on prior
+knowledge of how things usually turn out
+19. recognise to identify facts, characteristics or concepts that are critical
+to the understanding of a situation, event, process or
+phenomenon
+20. relate to identify and explain the relationships between objects,
+concepts or processes
+21. show an
+understanding
+to recall information (facts, concepts, models, data),
+translate information from one form to another, explain
+information and apply information
+22. solve problem to analyse a problem and choose a relevant and/or
+innovative solution in order to remedy or alter a problem
+situation
+23. state to give a concise answer with little or no supporting
+argument
+24. use apparatus
+and equipment
+to know the functions and limitations of various apparatus,
+and develop the ability to select and handle them
+appropriately for various tasks
+
+-- 84 of 87 --
+
+84
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+SECTION 7:
+ACKNOWLEDGEMENT
+
+-- 85 of 87 --
+
+85
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+7. ACKNOWLEDGEMENT
+Members of the Primary Science Syllabus Resource and Development Committee are:
+Name Designation Organisation
+Sin Kim Ho Divisional Director CPDD1
+Lee Lin Yee (Mdm) Director, Sciences CPDD1
+(Sciences Branch)
+Chin Tan Ying (Dr) Assistant Director, General
+Science/ Master Specialist
+CPDD1
+(Sciences Branch)
+Charlene Seah (Mdm) Senior Curriculum
+Specialist (Lower
+Secondary Science)
+CPDD1
+(Sciences Branch)
+Susan Koh Kia Lee (Mdm) Senior Curriculum Resource
+Development Officer (Primary
+Science)
+CPDD1
+(Sciences Branch)
+Nurhida Binte Sapiie (Mdm) Curriculum Planning Officer
+(Primary Science)
+CPDD1
+(Sciences Branch)
+Reena Devi D/o Arjun Singh
+(Ms)
+Curriculum Resource
+Development Officer (Primary
+Science)
+CPDD1
+(Sciences Branch)
+Ee Jia Ying (Ms) Curriculum Resource
+Development Officer (Primary
+Science)
+CPDD1
+(Sciences Branch)
+Siti Rohaiyah Mohd
+Tumpang (Ms)
+Curriculum Planning Officer
+(Primary Math)
+CPDD1
+(Sciences Branch)
+Wendy Ong (Mdm) Curriculum Planning Officer
+(Lower Secondary Science)
+CPDD1
+(Sciences Branch)
+Tan Jialin Grace (Ms) Curriculum Planning Officer
+(Science Normal (Technical))
+CPDD1
+(Sciences Branch)
+Tan Poh Hiang (Dr) Master Teacher Academy of
+Singapore Teachers
+Shi Jinghao Andy Senior Specialist (Gifted
+Education)
+CPDD1
+(Gifted Education
+Branch)
+
+-- 86 of 87 --
+
+86
+RESTRICTED
+FOR USE BY EDUCATION OFFICERS ONLY
+Name Designation Organisation
+Yong Fah Wui (Ms) Educational Technology
+Officer
+ETD
+(Technologies for
+Learning)
+Lee Yew Jin Associate Professor National Institute of
+Education
+Ang Yu Jian Educational Support Officer Schools Division
+(Uplift & Educational
+Support Branch)
+Ow Mun Hoe Lead Assessment Specialist Singapore
+Examinations and
+Assessment Board
+Sharon Tan (Ms) Senior Assessment Specialist Singapore
+Examinations and
+Assessment Board
+Pek Kwee Lan (Mrs) Principal Casuarina Primary
+School
+Chua Ye Ling (Mdm) Principal Poi Ching School
+Chia Siew Chin (Mdm) Lead Teacher Canberra Primary
+School
+Lee Sook San (Ms) Head of Department
+(Science)
+East Spring Primary
+School
+Caelyn Wyndee Lim (Ms) Head of Department
+(Science)
+Greendale Primary
+School
+Doreen Teh (Mdm) Level Head (Science) Shuqun Primary
+School
+The Ministry of Education also wishes to acknowledge all Principals, Vice Principals,
+Heads of Department / Subject Heads / Level Heads and teachers for their invaluable
+feedback and contributions in the development of this syllabus.
+
+-- 87 of 87 --
+
