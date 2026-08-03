@@ -1,0 +1,10 @@
+/* ============================================================
+   SCIENCE CLAW DESIGN SYSTEM — global entry point.
+   Consumers link THIS file only. Imports tokens + fonts.
+   (Keep this file as @import lines only — no inline rules.)
+   ============================================================ */
+
+@import url("tokens/colors.css");
+@import url("tokens/typography.css");
+@import url("tokens/spacing.css");
+@import url("tokens/effects.css");
