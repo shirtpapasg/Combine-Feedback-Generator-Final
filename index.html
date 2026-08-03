@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Science Teaching Tools</title>
+<link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/colors.css">
+<link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/tokens/typography.css">
+<link rel="stylesheet" href="_ds/science-claw-design-system-0049d466-e787-4a70-b5c8-0dc67671c4bb/styles.css">
+<style>
+  body { margin:0; min-height:100vh; background: var(--sc-bg); color: var(--sc-text); font-family: var(--font-body);
+         display:flex; align-items:center; justify-content:center; padding:24px; }
+  body::before { content:""; position:fixed; inset:0; pointer-events:none;
+    background: radial-gradient(1100px 640px at 50% -12%, rgba(102,204,255,.07), transparent 62%),
+                radial-gradient(820px 520px at 88% 116%, rgba(181,87,230,.05), transparent 58%); }
+  a { text-decoration:none; color: var(--sc-cyan); }
+  a:hover { color: #9ddcff; }
+</style>
+</head>
+<body>
+<main style="position:relative; width:100%; max-width:760px; display:flex; flex-direction:column; gap:22px;">
+
+  <header style="display:flex; align-items:center; gap:12px;">
+    <span style="font-size:28px; filter: drop-shadow(0 0 10px rgba(255,182,39,.4));">🦾</span>
+    <span style="font-family: var(--font-display); font-weight:900; font-size:21px; letter-spacing:.05em; text-transform:uppercase; color: var(--sc-yellow);">Science Teaching Tools</span>
+  </header>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:14px;">
+
+    <a href="Worksheet%20Compiler.dc.html" style="display:flex; flex-direction:column; gap:8px; padding:20px; border-radius:18px; background: var(--sc-glass); border:1px solid var(--sc-glass-line); box-shadow:0 8px 24px rgba(0,0,0,.32);">
+      <span style="font-size:26px;">📚</span>
+      <span style="font-family: var(--font-display); font-weight:800; font-size:16px; color:#fff;">Worksheet Compiler</span>
+      <span style="font-size:13px; line-height:1.5; color: var(--sc-text-muted);">Browse the library, transcribe answer keys, mark and tag questions.</span>
+    </a>
+
+    <a href="Form%20Creator.dc.html" style="display:flex; flex-direction:column; gap:8px; padding:20px; border-radius:18px; background: var(--sc-glass); border:1px solid var(--sc-glass-line); box-shadow:0 8px 24px rgba(0,0,0,.32);">
+      <span style="font-size:26px;">📋</span>
+      <span style="font-family: var(--font-display); font-weight:800; font-size:16px; color:#fff;">Google Form Creator</span>
+      <span style="font-size:13px; line-height:1.5; color: var(--sc-text-muted);">Turn a worksheet into a Google Form, with images and answer scoring.</span>
+    </a>
+
+    <a href="feedback-lab/index.html" style="display:flex; flex-direction:column; gap:8px; padding:20px; border-radius:18px; background: var(--sc-glass); border:1px solid var(--sc-glass-line); box-shadow:0 8px 24px rgba(0,0,0,.32);">
+      <span style="font-size:26px;">🔬</span>
+      <span style="font-family: var(--font-display); font-weight:800; font-size:16px; color:#fff;">Science Feedback Lab</span>
+      <span style="font-size:13px; line-height:1.5; color: var(--sc-text-muted);">Turn Google Form responses into per-pupil feedback.</span>
+    </a>
+
+  </div>
+
+  <p style="margin:0; font-size:12.5px; line-height:1.6; color: var(--sc-text-faint);">
+    Worksheet PDFs live in <code style="font-family: var(--font-mono); color: var(--sc-text-muted);">worksheets/</code> — file names must match <code style="font-family: var(--font-mono); color: var(--sc-text-muted);">manifest.json</code>. The Feedback Lab card only works if you have copied that app into <code style="font-family: var(--font-mono); color: var(--sc-text-muted);">feedback-lab/</code>.
+  </p>
+
+</main>
+</body>
+</html>
